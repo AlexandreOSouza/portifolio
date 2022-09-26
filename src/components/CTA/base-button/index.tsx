@@ -14,6 +14,8 @@ const BaseCTAButton = ({ children, ...props }: Props) => {
       py={"14px"}
       fontWeight={"450"}
       fontStyle={"normal"}
+      fontSize={"14px"}
+      lineHeight={"18.37px"}
       {...props}
     >
       {children}

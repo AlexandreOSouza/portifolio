@@ -6,8 +6,6 @@ const PrimaryButton = ({ children, ...props }: ButtonProps) => {
     <BaseCTAButton
       background={"accent.orange"}
       color={"primary.dark"}
-      fontSize={"14px"}
-      lineHeight={"18.37px"}
       _hover={{
         background: "accent.orangeHover",
       }}

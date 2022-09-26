@@ -27,6 +27,10 @@ const theme = extendTheme({
       blue: "#4D5BCE",
       green: "#43D9AD",
     },
+    default: {
+      darkBlue: "#1C2B3A",
+      darkBlueHover: "#263B50",
+    },
   },
   textStyles: {
     headline: {
