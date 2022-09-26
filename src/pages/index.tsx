@@ -18,9 +18,6 @@ const Home: NextPage = () => {
         <title>Home</title>
       </Head>
       <Header />
-      <PrimaryButton onClick={() => alert("click")}>start-game</PrimaryButton>
-      <DefaultButton onClick={() => alert("click")}>start-game</DefaultButton>
-      <GhostButton onClick={() => alert("click")}>start-game</GhostButton>
     </Flex>
   );
 };
