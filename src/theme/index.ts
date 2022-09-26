@@ -18,6 +18,7 @@ const theme = extendTheme({
       green: "#43D9AD",
       pink: "#E99287",
       purple: "#C98BDF",
+      orangeHover: "#FFAC6B",
     },
     lines: {
       main: "#1E2D3D",
@@ -25,6 +26,10 @@ const theme = extendTheme({
     gradients: {
       blue: "#4D5BCE",
       green: "#43D9AD",
+    },
+    default: {
+      darkBlue: "#1C2B3A",
+      darkBlueHover: "#263B50",
     },
   },
   textStyles: {
