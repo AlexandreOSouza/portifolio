@@ -18,6 +18,7 @@ const theme = extendTheme({
       green: "#43D9AD",
       pink: "#E99287",
       purple: "#C98BDF",
+      orangeHover: "#FFAC6B",
     },
     lines: {
       main: "#1E2D3D",
