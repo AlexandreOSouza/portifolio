@@ -10,7 +10,7 @@ const BUTTON_INDEX = {
 };
 
 const Header = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(BUTTON_INDEX.HOME);
 
   return (
     <Flex
