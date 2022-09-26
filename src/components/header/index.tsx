@@ -1,7 +1,13 @@
 import { Flex, Text } from "@chakra-ui/react";
 import HeaderButton from "../CTA/header-button";
 import { RiMenuFill } from "react-icons/ri";
-import { useMemo, useState } from "react";
+import { useState } from "react";
+
+const BUTTON_INDEX = {
+  HOME: 1,
+  ABOUT: 2,
+  PROJECTS: 3,
+};
 
 const Header = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -22,20 +28,20 @@ const Header = () => {
 
       <Flex ml={"12%"} display={{ base: "none", lg: "flex" }}>
         <HeaderButton
-          isActive={selectedIndex === 1}
-          onClick={() => setSelectedIndex(1)}
+          isActive={selectedIndex === BUTTON_INDEX.HOME}
+          onClick={() => setSelectedIndex(BUTTON_INDEX.HOME)}
         >
           _hello
         </HeaderButton>
         <HeaderButton
-          isActive={selectedIndex === 2}
-          onClick={() => setSelectedIndex(2)}
+          isActive={selectedIndex === BUTTON_INDEX.ABOUT}
+          onClick={() => setSelectedIndex(BUTTON_INDEX.ABOUT)}
         >
           _about-me
         </HeaderButton>
         <HeaderButton
-          isActive={selectedIndex === 3}
-          onClick={() => setSelectedIndex(3)}
+          isActive={selectedIndex === BUTTON_INDEX.PROJECTS}
+          onClick={() => setSelectedIndex(BUTTON_INDEX.PROJECTS)}
           isLastItem
         >
           _projects
