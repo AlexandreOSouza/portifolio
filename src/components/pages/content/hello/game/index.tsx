@@ -56,7 +56,15 @@ const Game = () => {
           boxShadow={"inset 1px 5px 11px rgba(2, 18, 27, 0.71)"}
           background={"rgba(1, 22, 39, 0.84)"}
           borderRadius={"8px"}
-        ></Flex>
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Text
+            textStyle={"label"}
+            color={"secondary.gray"}
+            textAlign={"center"}
+          >{`I'm still working in this game...`}</Text>
+        </Flex>
         <Flex pl={"24px"} flexDirection={"column"}>
           <Flex
             borderRadius={"8px"}
