@@ -6,6 +6,7 @@ import GhostButton from "../components/CTA/ghost";
 import PrimaryButton from "../components/CTA/primary";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import MainContent from "../components/pages/content";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <title>Home</title>
       </Head>
       <Header />
+      <MainContent />
       <Footer />
     </Flex>
   );

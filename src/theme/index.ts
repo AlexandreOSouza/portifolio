@@ -36,14 +36,13 @@ const theme = extendTheme({
     headline: {
       fontSize: "62px",
       lineHeight: "81.34px",
-      fontWeight: "450",
+      fontWeight: "400",
       color: "white",
     },
     subheadline: {
       fontSize: "32px",
       lineHeight: "41.98px",
       fontWeight: "450",
-      color: "white",
     },
     body: {
       fontSize: "18px",
@@ -55,7 +54,6 @@ const theme = extendTheme({
       fontSize: "16px",
       lineHeight: "20.99px",
       fontWeight: "450",
-      color: "white",
     },
     code: {
       fontSize: "14px",
