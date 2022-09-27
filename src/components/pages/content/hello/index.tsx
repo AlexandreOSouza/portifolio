@@ -1,4 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
+import Game from "./game";
 
 const HelloContent = () => {
   return (
@@ -40,20 +41,7 @@ const HelloContent = () => {
         flex={1}
         alignItems={"center"}
       >
-        {/* <Image
-          src={"/assets/Green.png"}
-          width={"50vw"}
-          height={"500px"}
-          alt={"gamebackground"}
-          ml={"-10vw"}
-        />
-        <Flex
-          backgroundImage={"./assets/game-background.svg"}
-          width={"510px"}
-          height={"475px"}
-          position={"absolute"}
-          borderRadius={"10px"}
-        ></Flex> */}
+        <Game />
       </Flex>
     </Flex>
   );
