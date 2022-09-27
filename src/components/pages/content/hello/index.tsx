@@ -11,7 +11,7 @@ const HelloContent = () => {
         flexDirection={"column"}
         alignItems={{ base: "center", lg: "flex-end" }}
         pr={{ base: "0px", lg: "50px" }}
-        pl={{ base: "0", lg: "40px" }}
+        pl={{ base: "20px", lg: "40px" }}
         minW={"55vw"}
       >
         <MainContent />

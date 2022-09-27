@@ -44,6 +44,11 @@ const theme = extendTheme({
       lineHeight: "41.98px",
       fontWeight: "450",
     },
+    subheadlineMobile: {
+      fontSize: "20px",
+      lineHeight: "26.24px",
+      fontWeight: "450",
+    },
     body: {
       fontSize: "18px",
       lineHeight: "23.62px",
