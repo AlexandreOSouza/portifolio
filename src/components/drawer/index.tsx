@@ -4,6 +4,8 @@ import {
   DrawerContent,
   DrawerBody,
 } from "@chakra-ui/react";
+import { PAGE_INDEX } from "../../helper/constants";
+import { usePage } from "../../hooks/usePages";
 import DrawerButton from "../CTA/drawer-button";
 type Props = {
   isOpen: boolean;
@@ -11,6 +13,13 @@ type Props = {
 };
 
 const MenuDrawer = ({ isOpen, onClose }: Props) => {
+  const { currentPage, setCurrentPage } = usePage();
+
+  const handleClick = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
+    onClose();
+  };
+
   return (
     <>
       <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
@@ -21,10 +30,30 @@ const MenuDrawer = ({ isOpen, onClose }: Props) => {
           marginTop={"56px"}
         >
           <DrawerBody p={0}>
-            <DrawerButton>_hello</DrawerButton>
-            <DrawerButton>_about-me</DrawerButton>
-            <DrawerButton>_projects</DrawerButton>
-            <DrawerButton>_contact-me</DrawerButton>
+            <DrawerButton
+              isActive={currentPage === PAGE_INDEX.HOME}
+              onClick={() => handleClick(PAGE_INDEX.HOME)}
+            >
+              _hello
+            </DrawerButton>
+            <DrawerButton
+              isActive={currentPage === PAGE_INDEX.ABOUT}
+              onClick={() => handleClick(PAGE_INDEX.ABOUT)}
+            >
+              _about-me
+            </DrawerButton>
+            <DrawerButton
+              isActive={currentPage === PAGE_INDEX.PROJECTS}
+              onClick={() => handleClick(PAGE_INDEX.PROJECTS)}
+            >
+              _projects
+            </DrawerButton>
+            <DrawerButton
+              isActive={currentPage === PAGE_INDEX.CONTACT}
+              onClick={() => handleClick(PAGE_INDEX.CONTACT)}
+            >
+              _contact-me
+            </DrawerButton>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
