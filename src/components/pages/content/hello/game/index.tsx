@@ -1,4 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
+import GhostButton from "../../../../CTA/ghost";
 import Arrows from "./arrows";
 import Food from "./food";
 
@@ -90,6 +91,11 @@ const Game = () => {
                 <Food isLeft />
               </Flex>
             </Flex>
+          </Flex>
+          <Flex mt={"auto"} justifyContent={"flex-end"}>
+            <GhostButton width={"62px"} height={"38px"}>
+              skip
+            </GhostButton>
           </Flex>
         </Flex>
       </Flex>
