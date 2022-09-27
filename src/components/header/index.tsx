@@ -3,16 +3,13 @@ import HeaderButton from "../CTA/header-button";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
 import MenuDrawer from "../drawer";
-
-const BUTTON_INDEX = {
-  HOME: 1,
-  ABOUT: 2,
-  PROJECTS: 3,
-};
+import { usePage } from "../../hooks/usePages";
+import { PAGE_INDEX } from "../../helper/constants";
 
 const Header = () => {
-  const [selectedIndex, setSelectedIndex] = useState(BUTTON_INDEX.HOME);
-  const [isdrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { currentPage, setCurrentPage } = usePage();
+
   return (
     <Flex
       borderColor={"lines.main"}
@@ -29,26 +26,31 @@ const Header = () => {
 
       <Flex ml={"12%"} display={{ base: "none", lg: "flex" }}>
         <HeaderButton
-          isActive={selectedIndex === BUTTON_INDEX.HOME}
-          onClick={() => setSelectedIndex(BUTTON_INDEX.HOME)}
+          isActive={currentPage === PAGE_INDEX.HOME}
+          onClick={() => setCurrentPage(PAGE_INDEX.HOME)}
         >
           _hello
         </HeaderButton>
         <HeaderButton
-          isActive={selectedIndex === BUTTON_INDEX.ABOUT}
-          onClick={() => setSelectedIndex(BUTTON_INDEX.ABOUT)}
+          isActive={currentPage === PAGE_INDEX.ABOUT}
+          onClick={() => setCurrentPage(PAGE_INDEX.ABOUT)}
         >
           _about-me
         </HeaderButton>
         <HeaderButton
-          isActive={selectedIndex === BUTTON_INDEX.PROJECTS}
-          onClick={() => setSelectedIndex(BUTTON_INDEX.PROJECTS)}
+          isActive={currentPage === PAGE_INDEX.PROJECTS}
+          onClick={() => setCurrentPage(PAGE_INDEX.PROJECTS)}
           isLastItem
         >
           _projects
         </HeaderButton>
       </Flex>
-      <HeaderButton ml={"auto"} display={{ base: "none", lg: "flex" }}>
+      <HeaderButton
+        ml={"auto"}
+        display={{ base: "none", lg: "flex" }}
+        isActive={currentPage === PAGE_INDEX.CONTACT}
+        onClick={() => setCurrentPage(PAGE_INDEX.CONTACT)}
+      >
         _contact-me
       </HeaderButton>
       <Flex
@@ -56,7 +58,7 @@ const Header = () => {
         marginLeft={"auto"}
         mr={"18px"}
       >
-        {isdrawerOpen ? (
+        {isDrawerOpen ? (
           <RiCloseFill
             color="#607B96"
             onClick={() => setIsDrawerOpen(false)}
@@ -67,7 +69,7 @@ const Header = () => {
         )}
       </Flex>
       <MenuDrawer
-        isOpen={isdrawerOpen}
+        isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
       />
     </Flex>
