@@ -1,7 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
 import HeaderButton from "../CTA/header-button";
-import { RiMenuFill } from "react-icons/ri";
+import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
+import MenuDrawer from "../drawer";
 
 const BUTTON_INDEX = {
   HOME: 1,
@@ -11,7 +12,7 @@ const BUTTON_INDEX = {
 
 const Header = () => {
   const [selectedIndex, setSelectedIndex] = useState(BUTTON_INDEX.HOME);
-
+  const [isdrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <Flex
       borderColor={"lines.main"}
@@ -55,8 +56,20 @@ const Header = () => {
         marginLeft={"auto"}
         mr={"18px"}
       >
-        <RiMenuFill color="#607B96" />
+        {isdrawerOpen ? (
+          <RiCloseFill
+            color="#607B96"
+            onClick={() => setIsDrawerOpen(false)}
+            fontSize={"20px"}
+          />
+        ) : (
+          <RiMenuFill color="#607B96" onClick={() => setIsDrawerOpen(true)} />
+        )}
       </Flex>
+      <MenuDrawer
+        isOpen={isdrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+      />
     </Flex>
   );
 };
