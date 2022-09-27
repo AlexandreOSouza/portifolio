@@ -8,7 +8,7 @@ const DrawerButton = ({ children, ...props }: ButtonProps) => {
       borderRadius={0}
       background={"transparent"}
       fontSize={"16px"}
-      color={"secondary.gray"}
+      color={"secondary.white"}
       lineHeight={"20px"}
       fontWeight={"400"}
       borderColor={"secondary.gray"}
