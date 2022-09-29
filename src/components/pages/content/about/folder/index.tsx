@@ -7,6 +7,7 @@ import {
   Box,
   Flex,
   Text,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { RiMailFill, RiMarkdownFill, RiPhoneFill } from "react-icons/ri";
@@ -33,11 +34,19 @@ const Folder = () => {
   return (
     <Flex
       height={"100%"}
-      width={"242.5px"}
+      width={{ base: "100%", lg: "242.5px" }}
       borderRight={"1px solid"}
       borderColor={"lines.main"}
     >
-      {renderContent}
+      <Flex
+        display={{ base: "flex", lg: "none" }}
+        flexDirection={{ base: "column", lg: "row" }}
+      >
+        <ProfessionalInfo />
+        <PersonalInfo />
+        <Hobbies />
+      </Flex>
+      <Flex display={{ base: "none", lg: "flex" }}>{renderContent},</Flex>
     </Flex>
   );
 };

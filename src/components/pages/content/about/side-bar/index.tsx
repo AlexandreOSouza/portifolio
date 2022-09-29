@@ -37,6 +37,7 @@ const SideBar = () => {
       alignItems={"center"}
       rowGap={"38px"}
       pt={"25px"}
+      display={{ base: "none", lg: "flex" }}
     >
       <Icon
         src={"./assets/about/console.svg"}

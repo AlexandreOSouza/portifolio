@@ -23,11 +23,18 @@ const PersonalInfo = () => {
           <>
             <Text textStyle={"label"} color={"white"}>
               <AccordionButton
-                width={"242px"}
+                width={{ base: "100vw", lg: "242px" }}
                 height={"46px"}
                 borderBottom={isExpanded ? "1px solid" : "none"}
                 borderColor={"lines.main"}
                 columnGap={"10px"}
+                background={{ base: "lines.main", lg: "primary.mid" }}
+                _active={{
+                  background: { base: "lines.main", lg: "primary.mid" },
+                }}
+                _hover={{
+                  background: { base: "lines.main", lg: "primary.mid" },
+                }}
               >
                 {isExpanded ? <RiArrowRightSFill /> : <RiArrowDownSFill />}
                 personal-info
@@ -41,17 +48,24 @@ const PersonalInfo = () => {
           </>
         )}
       </AccordionItem>
-      <AccordionItem border={"none"}>
+      <AccordionItem border={"none"} mt={{ base: "3px", lg: "0" }}>
         {({ isExpanded }) => (
           <>
             <Text textStyle={"label"} color={"white"}>
               <AccordionButton
-                width={"242px"}
+                width={{ base: "100vw", lg: "242px" }}
                 height={"46px"}
                 borderBottom={"1px solid"}
                 borderTop={"1px solid"}
                 borderColor={"lines.main"}
                 columnGap={"10px"}
+                background={{ base: "lines.main", lg: "primary.mid" }}
+                _active={{
+                  background: { base: "lines.main", lg: "primary.mid" },
+                }}
+                _hover={{
+                  background: { base: "lines.main", lg: "primary.mid" },
+                }}
               >
                 {isExpanded ? <RiArrowRightSFill /> : <RiArrowDownSFill />}
                 contacts
