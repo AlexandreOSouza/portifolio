@@ -7,6 +7,7 @@ const MainContent = () => {
       <Text
         textStyle={"headline"}
         fontSize={{ base: "35px", sm: "50px", md: "60px", lg: "62px" }}
+        lineHeight={{ base: "50px", sm: "81px" }}
       >
         Alexandre Souza
       </Text>
