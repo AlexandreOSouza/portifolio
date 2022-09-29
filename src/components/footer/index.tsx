@@ -7,8 +7,8 @@ const Footer = () => {
       marginTop={"auto"}
       width={"100%"}
       height={"50px"}
-      borderColor={"lines.main"}
       borderTop={"1px solid"}
+      borderColor={"lines.main"}
       alignItems={"center"}
       pl={"22px"}
     >
@@ -22,9 +22,9 @@ const Footer = () => {
         width={{ base: "154px", lg: "104px" }}
         ml={{ base: "auto", lg: "18px" }}
         justifyContent={"space-evenly"}
-        borderColor={"lines.main"}
         borderLeft={"1px solid"}
         borderRight={"1px solid"}
+        borderColor={"lines.main"}
       >
         <a
           href={"https://www.linkedin.com/in/alexandre-oliveira-souza/"}
@@ -61,8 +61,8 @@ const Footer = () => {
       </Flex>
 
       <Flex
-        borderColor={"lines.main"}
         borderLeft={"1px solid"}
+        borderColor={"lines.main"}
         height={"50px"}
         marginLeft={"auto"}
         px={"23px"}
