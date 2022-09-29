@@ -1,7 +1,11 @@
 import { Flex, Image } from "@chakra-ui/react";
+import { ABOUT_INDEX } from "../../../../../helper/constants";
+import { usePage } from "../../../../../hooks/usePages";
 
 const SideBar = () => {
-  const Icon = ({ src, isActive }: any) => {
+  const { currentAboutSection, setCurrentAboutSection } = usePage();
+
+  const Icon = ({ src, isActive, onClick }: any) => {
     return (
       <Image
         src={src}
@@ -13,8 +17,13 @@ const SideBar = () => {
           cursor: "pointer",
           marginRight: "2px",
         }}
+        onClick={onClick}
       />
     );
+  };
+
+  const handleClick = (index: number) => {
+    setCurrentAboutSection(index);
   };
 
   return (
@@ -29,9 +38,21 @@ const SideBar = () => {
       rowGap={"38px"}
       pt={"25px"}
     >
-      <Icon src={"./assets/about/console.svg"} />
-      <Icon src={"./assets/about/info.svg"} isActive />
-      <Icon src={"./assets/about/hobbie.svg"} />
+      <Icon
+        src={"./assets/about/console.svg"}
+        isActive={currentAboutSection === ABOUT_INDEX.PROFESSIONAL}
+        onClick={() => handleClick(ABOUT_INDEX.PROFESSIONAL)}
+      />
+      <Icon
+        src={"./assets/about/info.svg"}
+        isActive={currentAboutSection === ABOUT_INDEX.PERSONAL}
+        onClick={() => handleClick(ABOUT_INDEX.PERSONAL)}
+      />
+      <Icon
+        src={"./assets/about/hobbie.svg"}
+        isActive={currentAboutSection === ABOUT_INDEX.HOBBIES}
+        onClick={() => handleClick(ABOUT_INDEX.HOBBIES)}
+      />
     </Flex>
   );
 };

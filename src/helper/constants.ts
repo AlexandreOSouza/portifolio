@@ -4,3 +4,9 @@ export const PAGE_INDEX = {
   PROJECTS: 3,
   CONTACT: 4,
 };
+
+export const ABOUT_INDEX = {
+  PROFESSIONAL: 1,
+  PERSONAL: 2,
+  HOBBIES: 3,
+};
