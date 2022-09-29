@@ -13,26 +13,16 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
 } from "react-icons/ri";
+import AccordionCustomButton from "../../../../../accordion/button";
 import Item from "../item";
 
 const Hobbies = () => {
   return (
     <Accordion allowToggle allowMultiple defaultIndex={[0, 1]}>
-      <AccordionItem border={"none"}>
+      <AccordionItem border={"none"} mt={{ base: "3px", lg: "0" }}>
         {({ isExpanded }) => (
           <>
-            <Text textStyle={"label"} color={"white"}>
-              <AccordionButton
-                width={"242px"}
-                height={"46px"}
-                borderBottom={"1px solid"}
-                borderColor={"lines.main"}
-                columnGap={"10px"}
-              >
-                {isExpanded ? <RiArrowRightSFill /> : <RiArrowDownSFill />}
-                hobbies
-              </AccordionButton>
-            </Text>
+            <AccordionCustomButton title={"hobbies"} isExpanded={isExpanded} />
 
             <AccordionPanel>
               <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />

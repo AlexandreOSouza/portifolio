@@ -13,6 +13,7 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
 } from "react-icons/ri";
+import AccordionCustomButton from "../../../../../accordion/button";
 import Item from "../item";
 
 const ProfessionalInfo = () => {
@@ -21,18 +22,10 @@ const ProfessionalInfo = () => {
       <AccordionItem border={"none"}>
         {({ isExpanded }) => (
           <>
-            <Text textStyle={"label"} color={"white"}>
-              <AccordionButton
-                width={"242px"}
-                height={"46px"}
-                borderBottom={"1px solid"}
-                borderColor={"lines.main"}
-                columnGap={"10px"}
-              >
-                {isExpanded ? <RiArrowRightSFill /> : <RiArrowDownSFill />}
-                professional-info
-              </AccordionButton>
-            </Text>
+            <AccordionCustomButton
+              title={"professional-info"}
+              isExpanded={isExpanded}
+            />
 
             <AccordionPanel>
               <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />
