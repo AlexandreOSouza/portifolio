@@ -4,7 +4,12 @@ const MainContent = () => {
   return (
     <Flex flexDirection={"column"}>
       <Text textStyle={"body"}>Hi all, I am</Text>
-      <Text textStyle={"headline"}>Alexandre Souza</Text>
+      <Text
+        textStyle={"headline"}
+        fontSize={{ base: "35px", sm: "50px", md: "60px", lg: "62px" }}
+      >
+        Alexandre Souza
+      </Text>
       <Text
         textStyle={{ base: "subheadlineMobile", lg: "subheadline" }}
         color={{ base: "accent.green", lg: "secondary.blue" }}
@@ -18,7 +23,7 @@ const MainContent = () => {
       <Text
         textStyle={{ base: "code", lg: "label" }}
         color={"secondary.gray"}
-        mt={{ base: "81px", lg: "9px" }}
+        mt={{ base: "10vh", lg: "9px" }}
         maxWidth={{ base: "calc(100vw - 60px)", lg: "100%" }}
       >{`// you can find this source code on my Github`}</Text>
       <Text mt={"9px"} maxWidth={{ base: "calc(100vw - 60px)", lg: "100%" }}>

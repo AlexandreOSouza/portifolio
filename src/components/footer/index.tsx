@@ -4,13 +4,15 @@ import { RiLinkedinLine, RiInstagramLine, RiGithubFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <Flex
-      marginTop={"auto"}
+      marginTop={"calc(100vh - 50px)"}
       width={"100%"}
       height={"50px"}
       borderColor={"lines.main"}
       borderTop={"1px solid"}
       alignItems={"center"}
       pl={"22px"}
+      position={"fixed"}
+      background={"primary.mid"}
     >
       <Text color={"secondary.gray"} fontSize={"16px"} lineHeight={"20.99px"}>
         Find me in:
