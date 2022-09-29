@@ -16,6 +16,7 @@ const Header = () => {
       borderBottomColor={"lines.main"}
       width={"100vw"}
       height={"56px"}
+      minHeight={"56px"}
       background={"primary.mid"}
       pl={"22px"}
       alignItems={"center"}
