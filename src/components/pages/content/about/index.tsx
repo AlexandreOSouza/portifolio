@@ -1,7 +1,12 @@
-import { Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
+import SideBar from "./side-bar";
 
 const AboutMeContent = () => {
-  return <Text textStyle={"headline"}></Text>;
+  return (
+    <Flex flex={1}>
+      <SideBar />
+    </Flex>
+  );
 };
 
 export default AboutMeContent;
