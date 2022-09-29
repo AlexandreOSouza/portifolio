@@ -12,6 +12,7 @@ import { useMemo } from "react";
 import { RiMailFill, RiMarkdownFill, RiPhoneFill } from "react-icons/ri";
 import { ABOUT_INDEX } from "../../../../../helper/constants";
 import { usePage } from "../../../../../hooks/usePages";
+import Hobbies from "./hobbies";
 import Item from "./item";
 import PersonalInfo from "./personal-info";
 import ProfessionalInfo from "./professional-info";
@@ -24,6 +25,8 @@ const Folder = () => {
       return <ProfessionalInfo />;
     } else if (currentAboutSection === ABOUT_INDEX.PERSONAL) {
       return <PersonalInfo />;
+    } else if (currentAboutSection === ABOUT_INDEX.HOBBIES) {
+      return <Hobbies />;
     }
   }, [currentAboutSection]);
 
