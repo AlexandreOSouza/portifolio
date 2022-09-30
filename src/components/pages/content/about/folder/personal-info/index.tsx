@@ -18,7 +18,7 @@ import Item from "../item";
 
 const PersonalInfo = () => {
   return (
-    <Accordion allowToggle allowMultiple defaultIndex={[0, 1]}>
+    <Accordion allowToggle allowMultiple>
       <AccordionItem border={"none"} mt={{ base: "3px", lg: "0" }}>
         {({ isExpanded }) => (
           <>
