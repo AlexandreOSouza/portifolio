@@ -1,5 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import Folder from "./folder";
+import RenderAboutContent from "./render-content";
 import SideBar from "./side-bar";
 
 const AboutMeContent = () => {
@@ -7,6 +8,7 @@ const AboutMeContent = () => {
     <Flex flex={1}>
       <SideBar />
       <Folder />
+      <RenderAboutContent />
     </Flex>
   );
 };

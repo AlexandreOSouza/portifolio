@@ -36,6 +36,7 @@ const Folder = () => {
       height={"100%"}
       width={{ base: "100%", lg: "242.5px" }}
       borderRight={"1px solid"}
+      borderColor={"lines.main"}
     >
       <Flex
         display={{ base: "flex", lg: "none" }}
