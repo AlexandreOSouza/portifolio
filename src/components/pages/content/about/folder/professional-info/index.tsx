@@ -27,7 +27,7 @@ const ProfessionalInfo = () => {
               isExpanded={isExpanded}
             />
 
-            <AccordionPanel>
+            <AccordionPanel background={"primary.mid"}>
               <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />
               <Item title={"university"} icon={<RiMarkdownFill />} />
             </AccordionPanel>

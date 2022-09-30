@@ -27,7 +27,7 @@ const PersonalInfo = () => {
               isExpanded={isExpanded}
             />
 
-            <AccordionPanel>
+            <AccordionPanel background={"primary.mid"}>
               <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />
               <Item title={"university"} icon={<RiMarkdownFill />} />
             </AccordionPanel>
@@ -39,7 +39,7 @@ const PersonalInfo = () => {
           <>
             <AccordionCustomButton title={"contacts"} isExpanded={isExpanded} />
 
-            <AccordionPanel>
+            <AccordionPanel background={"primary.mid"}>
               <Item
                 title={
                   <a href="mailto:alesouza.dev@gmail.com">

@@ -36,7 +36,6 @@ const Folder = () => {
       height={"100%"}
       width={{ base: "100%", lg: "242.5px" }}
       borderRight={"1px solid"}
-      borderColor={"lines.main"}
     >
       <Flex
         display={{ base: "flex", lg: "none" }}
@@ -44,6 +43,8 @@ const Folder = () => {
       >
         <ProfessionalInfo />
         <PersonalInfo />
+        <Hobbies />
+        <Hobbies />
         <Hobbies />
       </Flex>
       <Flex display={{ base: "none", lg: "flex" }}>{renderContent},</Flex>

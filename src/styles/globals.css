@@ -8,3 +8,9 @@ body {
   overflow: hidden;
   background: #011627;
 }
+
+@media only screen and (max-width: 990px) {
+  body {
+    overflow-y: auto;
+  }
+}
