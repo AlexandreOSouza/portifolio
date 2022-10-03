@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
 import CustomTab from "./tab";
+import ReactMarkdown from "react-markdown";
+import IndexPanel from "./tab-panel/index";
 
 const RenderAboutContent = () => {
   return (
@@ -32,15 +34,8 @@ const RenderAboutContent = () => {
           borderColor={"lines.main"}
           height={"100%"}
         >
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>three!</p>
-          </TabPanel>
+          <IndexPanel />
+          <IndexPanel />
         </TabPanels>
       </Tabs>
     </Flex>

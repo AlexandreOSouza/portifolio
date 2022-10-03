@@ -15,7 +15,7 @@ const CustomTab = ({ title }: Props) => {
         background: "",
       }}
       _selected={{
-        borderBottom: "2px solid",
+        borderBottom: "1px solid",
         borderBottomColor: "#FEA55F",
         color: "white",
       }}
