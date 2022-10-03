@@ -14,6 +14,7 @@ import {
 import AccordionCustomButton from "../../../accordion/button";
 import Item from "../about/folder/item";
 import FilterItem from "./filter-item";
+import ProjectsList from "./projects-list";
 
 const ProjectsContent = () => {
   return (
@@ -45,6 +46,7 @@ const ProjectsContent = () => {
           </AccordionItem>
         </Accordion>
       </Flex>
+      <ProjectsList />
     </Flex>
   );
 };
