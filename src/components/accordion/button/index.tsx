@@ -1,12 +1,12 @@
-import { AccordionButton, Text } from "@chakra-ui/react";
+import { AccordionButton, AccordionButtonProps, Text } from "@chakra-ui/react";
 import { RiArrowDownSFill, RiArrowRightSFill } from "react-icons/ri";
 
-type Props = {
+type Props = AccordionButtonProps & {
   isExpanded: boolean;
   title: string;
 };
 
-const AccordionCustomButton = ({ isExpanded, title }: Props) => {
+const AccordionCustomButton = ({ isExpanded, title, ...props }: Props) => {
   return (
     <Text textStyle={"label"} color={"white"}>
       <AccordionButton
@@ -22,6 +22,7 @@ const AccordionCustomButton = ({ isExpanded, title }: Props) => {
         _hover={{
           background: { base: "lines.main", lg: "primary.mid" },
         }}
+        {...props}
       >
         {isExpanded ? <RiArrowRightSFill /> : <RiArrowDownSFill />}
         {title}
