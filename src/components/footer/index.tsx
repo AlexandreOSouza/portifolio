@@ -14,7 +14,12 @@ const Footer = () => {
       position={{ base: "relative", lg: "fixed" }}
       background={"primary.mid"}
     >
-      <Text color={"secondary.gray"} fontSize={"16px"} lineHeight={"20.99px"}>
+      <Text
+        color={"secondary.gray"}
+        fontSize={"16px"}
+        lineHeight={"20.99px"}
+        className={"noselect"}
+      >
         Find me in:
       </Text>
 

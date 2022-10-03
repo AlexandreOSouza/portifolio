@@ -23,7 +23,7 @@ const ProjectsContent = () => {
         borderRight={"1px solid"}
         borderColor={"lines.main"}
       >
-        <Accordion allowToggle allowMultiple>
+        <Accordion allowToggle allowMultiple defaultIndex={[0]}>
           <AccordionItem border={"none"}>
             {({ isExpanded }) => (
               <>

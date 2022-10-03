@@ -65,6 +65,7 @@ const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
         ml={"10px"}
         fontSize={"16px"}
         color={state.isChecked ? "white" : "secondary.gray"}
+        className={"noselect"}
       >
         {title}
       </Text>
