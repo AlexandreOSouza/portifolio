@@ -20,11 +20,9 @@ const textAbout = `
 
 const IndexPanel = () => {
   return (
-    <TabPanel pl={"39px"} pt={"17px"}>
-      <Text color={"secondary.gray"}>
-        <div dangerouslySetInnerHTML={{ __html: textAbout }}></div>
-      </Text>
-    </TabPanel>
+    <Text color={"secondary.gray"}>
+      <div dangerouslySetInnerHTML={{ __html: textAbout }}></div>
+    </Text>
   );
 };
 

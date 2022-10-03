@@ -33,7 +33,7 @@ const Folder = () => {
 
   return (
     <Flex
-      height={"100%"}
+      height={{ base: "auto", lg: "100%" }}
       width={{ base: "100%", lg: "242.5px" }}
       borderRight={"1px solid"}
       borderColor={"lines.main"}

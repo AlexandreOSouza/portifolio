@@ -5,7 +5,7 @@ import SideBar from "./side-bar";
 
 const AboutMeContent = () => {
   return (
-    <Flex flex={1}>
+    <Flex flex={1} flexDirection={{ base: "column", lg: "row" }}>
       <SideBar />
       <Folder />
       <RenderAboutContent />
