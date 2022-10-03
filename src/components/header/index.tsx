@@ -12,8 +12,8 @@ const Header = () => {
 
   return (
     <Flex
-      borderColor={"lines.main"}
       borderBottom={"1px solid"}
+      borderBottomColor={"lines.main"}
       width={"100vw"}
       height={"56px"}
       minHeight={"56px"}
@@ -21,11 +21,16 @@ const Header = () => {
       pl={"22px"}
       alignItems={"center"}
     >
-      <Text color={"secondary.gray"} fontSize={"16px"} lineHeight={"20.99px"}>
+      <Text
+        color={"secondary.gray"}
+        mr={"140px"}
+        fontSize={"16px"}
+        lineHeight={"20.99px"}
+      >
         alexandre-souza
       </Text>
 
-      <Flex ml={"12%"} display={{ base: "none", lg: "flex" }}>
+      <Flex display={{ base: "none", lg: "flex" }}>
         <HeaderButton
           isActive={currentPage === PAGE_INDEX.HOME}
           onClick={() => setCurrentPage(PAGE_INDEX.HOME)}
