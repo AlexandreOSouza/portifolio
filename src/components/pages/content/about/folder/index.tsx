@@ -45,8 +45,6 @@ const Folder = () => {
         <ProfessionalInfo />
         <PersonalInfo />
         <Hobbies />
-        <Hobbies />
-        <Hobbies />
       </Flex>
       <Flex display={{ base: "none", lg: "flex" }}>{renderContent},</Flex>
     </Flex>
