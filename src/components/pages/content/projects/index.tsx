@@ -35,7 +35,7 @@ const ProjectsContent = () => {
                 <AccordionCustomButton
                   title={"projects"}
                   isExpanded={isExpanded}
-                  width={{ base: "100vw", lg: "310.5px" }}
+                  width={{ base: "100vw", lg: "310px" }}
                 />
 
                 <AccordionPanel background={"primary.mid"} pl={"22px"}>

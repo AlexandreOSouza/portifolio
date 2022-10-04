@@ -36,6 +36,7 @@ const ProjectsList = () => {
         height={"100%"}
         py={"50px"}
         px={"27px"}
+        pb={"70px"}
         justifyContent={"center"}
       >
         <ProjectCard />
