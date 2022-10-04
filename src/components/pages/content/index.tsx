@@ -24,7 +24,7 @@ const MainContent = () => {
   }, [currentPage]);
 
   return (
-    <Flex flex={1} p={0} m={0}>
+    <Flex p={0} m={0} height={"calc(100vh - 106px)"}>
       {renderContent}
     </Flex>
   );
