@@ -18,9 +18,13 @@ import ProjectsList from "./projects-list";
 
 const ProjectsContent = () => {
   return (
-    <Flex width={"100vw"} height={"100%"}>
+    <Flex
+      width={"100vw"}
+      height={"100%"}
+      flexDirection={{ base: "column", lg: "row" }}
+    >
       <Flex
-        width={"310.5px"}
+        width={{ base: "100vw", lg: "310.5px" }}
         borderRight={"1px solid"}
         borderColor={"lines.main"}
       >
@@ -31,7 +35,7 @@ const ProjectsContent = () => {
                 <AccordionCustomButton
                   title={"projects"}
                   isExpanded={isExpanded}
-                  width={"310px"}
+                  width={{ base: "100vw", lg: "310.5px" }}
                 />
 
                 <AccordionPanel background={"primary.mid"} pl={"22px"}>

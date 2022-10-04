@@ -3,20 +3,11 @@ import { RiCloseFill } from "react-icons/ri";
 import ProjectCard from "../project-card";
 
 const ProjectsList = () => {
-  const ProjectRow = () => {
-    return (
-      <Flex width={"100%"} justifyContent={"center"} columnGap={10}>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-      </Flex>
-    );
-  };
-
   return (
     <Flex flex={1} flexDirection={"column"}>
       <Flex
-        height={"45px"}
+        display={{ base: "none", lg: "flex" }}
+        height={"48px"}
         width={"200px"}
         borderRight={"1px solid"}
         borderColor={"lines.main"}
@@ -33,24 +24,20 @@ const ProjectsList = () => {
         display={"grid"}
         gridTemplateColumns={{
           base: "repeat(auto-fill, minmax(165px, 1fr))",
-          md: "repeat(auto-fill, minmax(230px, 1fr))",
-          xl: "repeat(auto-fill, minmax(260px, 1fr))",
+          md: "repeat(auto-fill, minmax(280px, 1fr))",
+          xl: "repeat(auto-fill, minmax(290px, 1fr))",
         }}
         borderTop={"1px solid"}
         borderColor={"lines.main"}
-        alignItems={"center"}
+        alignItems={"flex-start"}
         overflowY={"auto"}
         rowGap={10}
         columnGap={10}
         height={"100%"}
         py={"50px"}
-        px={"100px"}
+        px={"27px"}
+        justifyContent={"center"}
       >
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

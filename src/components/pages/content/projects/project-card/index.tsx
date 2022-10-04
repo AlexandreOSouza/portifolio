@@ -1,14 +1,16 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import { RiReactjsLine } from "react-icons/ri";
 import DefaultButton from "../../../../CTA/default";
-import GhostButton from "../../../../CTA/ghost";
-import PrimaryButton from "../../../../CTA/primary";
 import CardIcon from "./card-icon";
 
 const ProjectCard = () => {
   return (
-    <Flex flexDirection={"column"}>
-      <Flex>
+    <Flex
+      flexDirection={"column"}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
+      <Flex width={"100%"}>
         <Text textStyle={"label"} color={"primary.blue"}>
           Project 1
         </Text>
@@ -17,8 +19,10 @@ const ProjectCard = () => {
         </Text>
       </Flex>
       <Flex
-        width={"320px"}
+        width={{ base: "100%", lg: "320px" }}
         height={"250px"}
+        maxWidth={"320px"}
+        minWidth={"200px"}
         borderRadius={"15px"}
         border={"1px solid"}
         borderColor={"lines.main"}
