@@ -9,6 +9,7 @@ import { RiReactjsFill, RiHtml5Fill, RiCss3Fill } from "react-icons/ri";
 import AccordionCustomButton from "../../../accordion/button";
 import PersonalInfoAccordion from "../../../accordion/personal-contacts";
 import FilterItem from "../projects/filter-item";
+import ContactContainer from "./contact-container";
 
 const ContactContent = () => {
   return (
@@ -26,6 +27,7 @@ const ContactContent = () => {
           </AccordionItem>
         </Accordion>
       </Flex>
+      <ContactContainer />
     </Flex>
   );
 };
