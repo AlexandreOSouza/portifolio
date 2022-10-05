@@ -1,6 +1,7 @@
 import { Flex, Input, Text, Textarea } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
 import DefaultButton from "../../../../CTA/default";
+import CodeSnippet from "../code-snippet";
 
 const ContactContainer = () => {
   return (
@@ -22,12 +23,13 @@ const ContactContainer = () => {
       </Flex>
       <Flex flex={1} borderTop={"1px solid"} borderColor={"lines.main"}>
         <Flex
-          width={"50%"}
+          width={{ base: "100%", lg: "50%" }}
           justifyContent={"center"}
           alignItems={"flex-start"}
           pt={"100px"}
           borderRight={"1px solid"}
           borderColor={"lines.main"}
+          minWidth={{ base: "100vw", lg: "450px" }}
         >
           <Flex flexDirection={"column"} width={"350px"}>
             <Text textStyle={"label"} color={"secondary.gray"}>
@@ -99,7 +101,20 @@ const ContactContainer = () => {
             </DefaultButton>
           </Flex>
         </Flex>
-        <Flex width={"50%"}></Flex>
+        <Flex
+          width={"50%"}
+          justifyContent={"center"}
+          pt={"100px"}
+          display={{ base: "none", lg: "flex" }}
+          minWidth={"450px"}
+          pl={"50px"}
+        >
+          <CodeSnippet
+            name={"ale"}
+            email={"alesouza.dev@gmail.com"}
+            message={"test message"}
+          />
+        </Flex>
       </Flex>
     </Flex>
   );
