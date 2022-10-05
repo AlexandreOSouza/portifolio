@@ -14,6 +14,7 @@ import {
   RiArrowRightSFill,
 } from "react-icons/ri";
 import AccordionCustomButton from "../../../../../accordion/button";
+import PersonalInfoAccordion from "../../../../../accordion/personal-contacts";
 import Item from "../item";
 
 const PersonalInfo = () => {
@@ -35,36 +36,7 @@ const PersonalInfo = () => {
         )}
       </AccordionItem>
       <AccordionItem border={"none"} mt={{ base: "3px", lg: "0" }}>
-        {({ isExpanded }) => (
-          <>
-            <AccordionCustomButton title={"contacts"} isExpanded={isExpanded} />
-
-            <AccordionPanel background={"primary.mid"}>
-              <Item
-                title={
-                  <a href="mailto:alesouza.dev@gmail.com">
-                    alesouza.dev@gmail.com
-                  </a>
-                }
-                icon={<RiMailFill />}
-                isActive
-              />
-              <Item
-                title={
-                  <a
-                    href="https://wa.me/5511959147536?text=Hello"
-                    target={"_blank"}
-                    rel="noreferrer"
-                  >
-                    5511959147536
-                  </a>
-                }
-                icon={<RiPhoneFill />}
-                isActive
-              />
-            </AccordionPanel>
-          </>
-        )}
+        {({ isExpanded }) => <PersonalInfoAccordion isExpanded={isExpanded} />}
       </AccordionItem>
     </Accordion>
   );

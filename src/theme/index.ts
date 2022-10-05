@@ -13,6 +13,7 @@ const theme = extendTheme({
       green: "#3C9D93",
       blue: "#4D5BCE",
       white: "#FFFFFF",
+      midGray: "#465E77",
     },
     accent: {
       orange: "#FEA55F",
