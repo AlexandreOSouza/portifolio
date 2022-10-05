@@ -25,13 +25,17 @@ const ContactContainer = () => {
         <Flex
           width={{ base: "100%", lg: "50%" }}
           justifyContent={"center"}
-          alignItems={"flex-start"}
-          pt={"100px"}
+          alignItems={{ base: "center", lg: "flex-start" }}
+          pt={{ base: "0", lg: "100px" }}
           borderRight={"1px solid"}
           borderColor={"lines.main"}
           minWidth={{ base: "100vw", lg: "450px" }}
         >
-          <Flex flexDirection={"column"} width={"350px"}>
+          <Flex
+            flexDirection={"column"}
+            width={{ base: "80vw", lg: "350px" }}
+            maxWidth={{ base: "300px", lg: "" }}
+          >
             <Text textStyle={"label"} color={"secondary.gray"}>
               _name:
             </Text>
