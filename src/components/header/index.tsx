@@ -4,11 +4,19 @@ import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
 import MenuDrawer from "../drawer";
 import { usePage } from "../../hooks/usePages";
-import { PAGE_INDEX } from "../../helper/constants";
+import { PAGE_INDEX, PAGE_URL } from "../../helper/constants";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const { currentPage, setCurrentPage } = usePage();
+  // const { currentPage, setCurrentPage } = usePage();
+  const router = useRouter();
+
+  const currentPage = router.asPath.replace("/", "");
+
+  const handleClick = (pageIndex: number) => {
+    router.push(`/${PAGE_URL[pageIndex as 1 | 2 | 3 | 4]}`);
+  };
 
   return (
     <Flex
@@ -32,20 +40,20 @@ const Header = () => {
 
       <Flex display={{ base: "none", lg: "flex" }}>
         <HeaderButton
-          isActive={currentPage === PAGE_INDEX.HOME}
-          onClick={() => setCurrentPage(PAGE_INDEX.HOME)}
+          isActive={currentPage === PAGE_URL[1]}
+          onClick={() => handleClick(PAGE_INDEX.HOME)}
         >
           _hello
         </HeaderButton>
         <HeaderButton
-          isActive={currentPage === PAGE_INDEX.ABOUT}
-          onClick={() => setCurrentPage(PAGE_INDEX.ABOUT)}
+          isActive={currentPage === PAGE_URL[2]}
+          onClick={() => handleClick(PAGE_INDEX.ABOUT)}
         >
           _about-me
         </HeaderButton>
         <HeaderButton
-          isActive={currentPage === PAGE_INDEX.PROJECTS}
-          onClick={() => setCurrentPage(PAGE_INDEX.PROJECTS)}
+          isActive={currentPage === PAGE_URL[3]}
+          onClick={() => handleClick(PAGE_INDEX.PROJECTS)}
           isLastItem
         >
           _projects
@@ -54,8 +62,8 @@ const Header = () => {
       <HeaderButton
         ml={"auto"}
         display={{ base: "none", lg: "flex" }}
-        isActive={currentPage === PAGE_INDEX.CONTACT}
-        onClick={() => setCurrentPage(PAGE_INDEX.CONTACT)}
+        isActive={currentPage === PAGE_URL[4]}
+        onClick={() => handleClick(PAGE_INDEX.CONTACT)}
       >
         _contact-me
       </HeaderButton>
