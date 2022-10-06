@@ -10,9 +10,6 @@ import Header from "../components/header";
 import MainContent from "../components/pages/content";
 
 const Home: NextPage = (props: any) => {
-  useEffect(() => {
-    console.log(props);
-  }, [props]);
   return (
     <Flex
       backgroundColor={"primary.mid"}
@@ -21,16 +18,15 @@ const Home: NextPage = (props: any) => {
       flexDir={"column"}
     >
       <Header />
-      <MainContent />
+      <MainContent page={props.page} />
       <Footer />
     </Flex>
   );
 };
 
 export async function getServerSideProps(context: any) {
-  console.log(context);
   return {
-    props: { page: context.query.index }, // will be passed to the page component as props
+    props: { page: context.query.index },
   };
 }
 

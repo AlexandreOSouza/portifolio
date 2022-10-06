@@ -1,15 +1,15 @@
-export const PAGE_INDEX = {
-  HOME: 1,
-  ABOUT: 2,
-  PROJECTS: 3,
-  CONTACT: 4,
-};
-
 export const PAGE_URL = {
   1: "home",
   2: "about",
   3: "project",
   4: "contact",
+};
+
+export const PAGE_INDEX = {
+  HOME: 1,
+  ABOUT: 2,
+  PROJECTS: 3,
+  CONTACT: 4,
 };
 
 export const ABOUT_INDEX = {
