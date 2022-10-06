@@ -10,3 +10,10 @@ export const ABOUT_INDEX = {
   PERSONAL: 2,
   HOBBIES: 3,
 };
+
+export const PAGE_TITLE = {
+  HOME: "alesouza.dev | Home",
+  ABOUT: "alesouza.dev | About-me",
+  PROJECTS: "alesouza.dev | Projects",
+  CONTACT: "alesouza.dev | Contact-me",
+};
