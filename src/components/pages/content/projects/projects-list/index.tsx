@@ -7,7 +7,7 @@ const ProjectsList = () => {
     <Flex flex={1} flexDirection={"column"}>
       <Flex
         display={{ base: "none", lg: "flex" }}
-        height={"48px"}
+        height={"49px"}
         width={"200px"}
         borderRight={"1px solid"}
         borderColor={"lines.main"}
@@ -21,6 +21,7 @@ const ProjectsList = () => {
         <RiCloseFill />
       </Flex>
       <Box
+        className="custom-scroll"
         display={"grid"}
         gridTemplateColumns={{
           base: "repeat(auto-fill, minmax(165px, 1fr))",
