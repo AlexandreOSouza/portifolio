@@ -16,6 +16,7 @@ const Home: NextPage = (props: any) => {
       flex={1}
       height={"100vh"}
       flexDir={"column"}
+      className={"custom-scrollbar"}
     >
       <Header />
       <MainContent page={props.page} />

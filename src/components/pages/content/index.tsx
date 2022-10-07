@@ -12,8 +12,6 @@ type Props = {
 };
 
 const MainContent = ({ page }: Props) => {
-  const { currentPage } = usePage();
-
   const renderContent = useMemo(() => {
     if (page === PAGE_URL[2]) {
       return <AboutMeContent />;
