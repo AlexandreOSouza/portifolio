@@ -9,12 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PageContextProvider>
       <ChakraProvider theme={theme}>
-        <Head>
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
-          />
-        </Head>
         <Component {...pageProps} />
       </ChakraProvider>
     </PageContextProvider>

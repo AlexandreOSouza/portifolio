@@ -18,7 +18,7 @@ import Item from "../item";
 
 const Hobbies = () => {
   return (
-    <Accordion allowToggle allowMultiple>
+    <Accordion allowToggle>
       <AccordionItem border={"none"} mt={{ base: "3px", lg: "0" }}>
         {({ isExpanded }) => (
           <>

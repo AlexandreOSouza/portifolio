@@ -18,7 +18,7 @@ import Item from "../item";
 
 const ProfessionalInfo = () => {
   return (
-    <Accordion allowToggle allowMultiple>
+    <Accordion allowMultiple defaultIndex={[0]}>
       <AccordionItem border={"none"}>
         {({ isExpanded }) => (
           <>
