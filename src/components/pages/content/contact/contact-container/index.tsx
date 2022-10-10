@@ -1,9 +1,14 @@
 import { Flex, Input, Text, Textarea } from "@chakra-ui/react";
+import { useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
 import DefaultButton from "../../../../CTA/default";
 import CodeSnippet from "../code-snippet";
 
 const ContactContainer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <Flex flex={1} flexDirection={"column"}>
       <Flex
@@ -23,7 +28,7 @@ const ContactContainer = () => {
       </Flex>
       <Flex flex={1} borderTop={"1px solid"} borderColor={"lines.main"}>
         <Flex
-          width={{ base: "100%", lg: "50%" }}
+          width={{ base: "100%", lg: "40%" }}
           justifyContent={"center"}
           alignItems={{ base: "center", lg: "flex-start" }}
           pt={{ base: "0", lg: "100px" }}
@@ -47,6 +52,8 @@ const ContactContainer = () => {
               borderColor={"lines.main"}
               mt={"10px"}
               color={"secondary.midGray"}
+              value={name}
+              onChange={(e) => setName(e.target.value as any)}
               borderRadius={"8px"}
               _focusVisible={{
                 boxShadow: "0px 0px 0px 2px rgba(96, 123, 150, 0.3)",
@@ -69,6 +76,8 @@ const ContactContainer = () => {
               mt={"10px"}
               color={"secondary.midGray"}
               borderRadius={"8px"}
+              value={email}
+              onChange={(e) => setEmail(e.target.value as any)}
               _focusVisible={{
                 boxShadow: "0px 0px 0px 2px rgba(96, 123, 150, 0.3)",
                 outline: "none",
@@ -91,6 +100,8 @@ const ContactContainer = () => {
               size={"xs"}
               color={"secondary.midGray"}
               borderRadius={"8px"}
+              value={message}
+              onChange={(e) => setMessage(e.target.value as any)}
               _focusVisible={{
                 boxShadow: "0px 0px 0px 2px rgba(96, 123, 150, 0.3)",
                 outline: "none",
@@ -106,18 +117,14 @@ const ContactContainer = () => {
           </Flex>
         </Flex>
         <Flex
-          width={"50%"}
+          width={"55%"}
           justifyContent={"center"}
           pt={"100px"}
           display={{ base: "none", lg: "flex" }}
           minWidth={"450px"}
           pl={"50px"}
         >
-          <CodeSnippet
-            name={"ale"}
-            email={"alesouza.dev@gmail.com"}
-            message={"test message"}
-          />
+          <CodeSnippet name={name} email={email} message={message} />
         </Flex>
       </Flex>
     </Flex>
