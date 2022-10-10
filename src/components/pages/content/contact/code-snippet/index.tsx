@@ -25,7 +25,7 @@ const CodeSnippet = ({ name, email, message }: Props) => {
 
   const OrangeText = ({ children }: any) => {
     return (
-      <Text color={"accent.orange"} maxWidth={"250px"} wordBreak={"break-all"}>
+      <Text color={"accent.orange"}>
         <pre>{children}</pre>
       </Text>
     );

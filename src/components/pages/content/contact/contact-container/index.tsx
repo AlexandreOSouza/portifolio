@@ -124,7 +124,7 @@ const ContactContainer = () => {
           minWidth={"450px"}
           pl={"50px"}
         >
-          <CodeSnippet name={name} email={email} message={message} />
+          <CodeSnippet name={name} email={email} message={""} />
         </Flex>
       </Flex>
     </Flex>
