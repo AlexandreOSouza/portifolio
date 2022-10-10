@@ -1,12 +1,9 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { useForm } from "../../../../../hooks/useForm";
 
-type Props = {
-  name: string;
-  email: string;
-  message: string;
-};
+const CodeSnippet = () => {
+  const { message, name, email } = useForm();
 
-const CodeSnippet = ({ name, email, message }: Props) => {
   const PinkText = ({ children }: any) => {
     return (
       <Text color={"accent.purple"}>
