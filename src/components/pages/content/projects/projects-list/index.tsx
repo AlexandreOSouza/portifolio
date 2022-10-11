@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
+import { PROJECTS } from "../../../../../helper/constants";
 import ProjectCard from "../project-card";
 
 const ProjectsList = () => {
@@ -40,10 +41,9 @@ const ProjectsList = () => {
         pb={"70px"}
         justifyContent={"center"}
       >
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {PROJECTS.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
       </Box>
     </Flex>
   );

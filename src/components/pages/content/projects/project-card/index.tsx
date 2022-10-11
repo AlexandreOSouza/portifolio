@@ -1,9 +1,10 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import { RiReactjsLine } from "react-icons/ri";
+import { ProjectProps } from "../../../../../helper/constants";
 import DefaultButton from "../../../../CTA/default";
 import CardIcon from "./card-icon";
 
-const ProjectCard = () => {
+const ProjectCard = (props: ProjectProps) => {
   return (
     <Flex justifyContent={"center"}>
       <Flex flexDirection={"column"}>
@@ -16,14 +17,14 @@ const ProjectCard = () => {
             color={"primary.blue"}
             whiteSpace={"nowrap"}
           >
-            Project 1
+            {props.title}
           </Text>
           <Text
             textStyle={"label"}
             color={"secondary.gray"}
             whiteSpace={"nowrap"}
           >
-            &nbsp;{"// _tetris-game"}
+            &nbsp;{`// ${props.subtitle}`}
           </Text>
         </Flex>
         <Flex
@@ -41,7 +42,7 @@ const ProjectCard = () => {
             height={"45%"}
             width={"100%"}
             borderTopRadius={"15px"}
-            backgroundImage={"./assets/cards/game.jpeg"}
+            backgroundImage={props.image}
             backgroundPosition={"center"}
             backgroundSize={"cover"}
             justifyContent={"flex-end"}
@@ -51,7 +52,7 @@ const ProjectCard = () => {
             <CardIcon backgroundColor={"#86E1F9"} icon={<RiReactjsLine />} />
           </Flex>
           <Flex
-            pt={"24px"}
+            pt={"20px"}
             pb={"32px"}
             pl={"31px"}
             background={"primary.midDark"}
@@ -61,9 +62,11 @@ const ProjectCard = () => {
             rowGap={3}
           >
             <Text color={"secondary.gray"} fontSize={"14px"}>
-              Duis aute irure dolor in velit esse cillum dolore.
+              {props.description}
             </Text>
-            <DefaultButton width={"130px"}>view-project</DefaultButton>
+            <a href={props.ctaLink} target={"_blank"} rel="noreferrer">
+              <DefaultButton width={"130px"}>view-project</DefaultButton>
+            </a>
           </Flex>
         </Flex>
       </Flex>
