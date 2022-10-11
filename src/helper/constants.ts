@@ -90,15 +90,35 @@ export const PROJECTS = [
   {
     title: "Project 8",
     subtitle: "_My_links",
-    description: "A site to store all my links",
+    description: "A site to store all my links.",
     ctaLink: "https://alexandre-links.herokuapp.com/",
     image: "./assets/projects/my-links.png",
   },
   {
     title: "Project 9",
     subtitle: "_Robo_Punks",
-    description: "A SPA to mint a Robo Punks NFT",
+    description: "A SPA to mint a Robo Punks NFT.",
     ctaLink: "https://github.com/AlexandreOSouza/RoboPunks",
     image: "./assets/projects/robo-punks.png",
+  },
+  {
+    title: "Project 10",
+    subtitle: "_Generative_Images",
+    description: "A POC to undertand the generative images process.",
+    ctaLink: "https://github.com/AlexandreOSouza/Generative-Images",
+  },
+  {
+    title: "Project 11",
+    subtitle: "_Dt_Money",
+    description: "An App to help yout with your financial life.",
+    ctaLink: "https://github.com/AlexandreOSouza/dtmoney",
+    image: "./assets/projects/dt-money.png",
+  },
+  {
+    title: "Project 12",
+    subtitle: "_Dollar_to_Real",
+    description: "Convert Dollar to Real(BR currency) in real time.",
+    ctaLink: "https://github.com/AlexandreOSouza/dollar-price",
+    image: "./assets/projects/dollar.png",
   },
 ] as ProjectProps[];
