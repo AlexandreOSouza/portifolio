@@ -67,7 +67,7 @@ export const PROJECTS = [
     title: "Project 5",
     subtitle: "_DVide0",
     description:
-      "An Application that enables you to upload videos to IPFS and store on the Ethereum blockchain.",
+      "An App to upload videos to IPFS and store on the Ethereum blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/dvideo",
     image: "./assets/projects/dvideo.png",
   },
@@ -83,7 +83,7 @@ export const PROJECTS = [
     title: "Project 7",
     subtitle: "_Decentragram",
     description:
-      "A WEB 3.0 Instagram clone where you can upload an image and the users can give you a tip.",
+      "A WEB3 Instagram clone where you can upload an image and the users can give you a tip.",
     ctaLink: "https://github.com/AlexandreOSouza/decentragram",
     image: "./assets/projects/decentagram.png",
   },

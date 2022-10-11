@@ -10,7 +10,7 @@ const ProjectCard = (props: ProjectProps) => {
       <Flex flexDirection={"column"}>
         <Flex
           width={{ base: "100%", lg: "auto" }}
-          flexDir={{ base: "column", md: "row" }}
+          flexDir={{ base: "row", md: "row" }}
         >
           <Text
             textStyle={"label"}
@@ -28,10 +28,8 @@ const ProjectCard = (props: ProjectProps) => {
           </Text>
         </Flex>
         <Flex
-          width={{ base: "100%", lg: "320px" }}
-          height={"250px"}
-          maxWidth={"320px"}
-          minWidth={"200px"}
+          height={"300px"}
+          width={"320px"}
           borderRadius={"15px"}
           border={"1px solid"}
           borderColor={"lines.main"}
@@ -53,13 +51,14 @@ const ProjectCard = (props: ProjectProps) => {
           </Flex>
           <Flex
             pt={"20px"}
-            pb={"32px"}
-            pl={"31px"}
+            pb={"30px"}
+            px={"31px"}
             background={"primary.midDark"}
             height={"55%"}
             borderBottomRadius={"25px"}
             flexDir={"column"}
             rowGap={3}
+            justifyContent={"space-between"}
           >
             <Text color={"secondary.gray"} fontSize={"14px"}>
               {props.description}
