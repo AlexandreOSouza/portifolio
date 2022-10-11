@@ -48,4 +48,57 @@ export const PROJECTS = [
     ctaLink: "https://www.rebelrabbits.io/",
     image: "./assets/projects/rr.png",
   },
+  {
+    title: "Project 3",
+    subtitle: "_coffee_shop",
+    description: "A site for a Coffee shop ",
+    ctaLink: "https://github.com/AlexandreOSouza/coffee-shop",
+    image: "./assets/projects/coffee.png",
+  },
+  {
+    title: "Project 4",
+    subtitle: "_my_NFT_mp",
+    description:
+      "My own NFT Marketplace build with React and Solidity based on Ethereum blockchain.",
+    ctaLink: "https://github.com/AlexandreOSouza/nft-marketplace",
+    image: "./assets/projects/my_mp.png",
+  },
+  {
+    title: "Project 5",
+    subtitle: "_DVide0",
+    description:
+      "An Application that enables you to upload videos to IPFS and store on the Ethereum blockchain.",
+    ctaLink: "https://github.com/AlexandreOSouza/dvideo",
+    image: "./assets/projects/dvideo.png",
+  },
+  {
+    title: "Project 6",
+    subtitle: "_DMemory",
+    description:
+      "A memory game in that you can collect NFT when you find the matching one.",
+    ctaLink: "https://github.com/AlexandreOSouza/dmemory",
+    image: "./assets/projects/dmemory.png",
+  },
+  {
+    title: "Project 7",
+    subtitle: "_Decentragram",
+    description:
+      "A WEB 3.0 Instagram clone where you can upload an image and the users can give you a tip.",
+    ctaLink: "https://github.com/AlexandreOSouza/decentragram",
+    image: "./assets/projects/decentagram.png",
+  },
+  {
+    title: "Project 8",
+    subtitle: "_My_links",
+    description: "A site to store all my links",
+    ctaLink: "https://alexandre-links.herokuapp.com/",
+    image: "./assets/projects/my-links.png",
+  },
+  {
+    title: "Project 9",
+    subtitle: "_Robo_Punks",
+    description: "A SPA to mint a Robo Punks NFT",
+    ctaLink: "https://github.com/AlexandreOSouza/RoboPunks",
+    image: "./assets/projects/robo-punks.png",
+  },
 ] as ProjectProps[];
