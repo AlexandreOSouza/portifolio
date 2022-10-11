@@ -6,12 +6,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Head from "next/head";
+import { FaEthereum, FaNodeJs } from "react-icons/fa";
 import {
   RiCss3Fill,
   RiHtml5Fill,
   RiMarkdownFill,
   RiReactjsFill,
 } from "react-icons/ri";
+import { SiSolidity, SiTsnode, SiTypescript } from "react-icons/si";
 import { PAGE_TITLE } from "../../../../helper/constants";
 import AccordionCustomButton from "../../../accordion/button";
 import Item from "../about/folder/item";
@@ -50,6 +52,13 @@ const ProjectsContent = () => {
                       <FilterItem title={"React"} icon={<RiReactjsFill />} />
                       <FilterItem title={"HTML"} icon={<RiHtml5Fill />} />
                       <FilterItem title={"CSS"} icon={<RiCss3Fill />} />
+                      <FilterItem title={"Solidity"} icon={<SiSolidity />} />
+                      <FilterItem title={"Node JS"} icon={<FaNodeJs />} />
+                      <FilterItem
+                        title={"Typescript"}
+                        icon={<SiTypescript />}
+                      />
+                      <FilterItem title={"Ethereum"} icon={<FaEthereum />} />
                     </Flex>
                   </AccordionPanel>
                 </>

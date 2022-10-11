@@ -30,7 +30,14 @@ export type ProjectProps = {
   subtitle: string;
   description: string;
   ctaLink: string;
-  image: string;
+  image?: string;
+  react?: boolean;
+  solidity?: boolean;
+  node?: boolean;
+  html?: boolean;
+  css?: boolean;
+  ts?: boolean;
+  eth?: boolean;
 };
 
 export const PROJECTS = [
@@ -40,6 +47,8 @@ export const PROJECTS = [
     description: "A NFT marketplace on the Flow blockchain.",
     ctaLink: "https://ongaia.com/",
     image: "./assets/projects/gaia.png",
+    react: true,
+    ts: true,
   },
   {
     title: "Project 2",
@@ -47,6 +56,9 @@ export const PROJECTS = [
     description: "Generative NFT that encapsulates the true spirit of crypto.",
     ctaLink: "https://www.rebelrabbits.io/",
     image: "./assets/projects/rr.png",
+    react: true,
+    ts: true,
+    eth: true,
   },
   {
     title: "Project 3",
@@ -54,6 +66,7 @@ export const PROJECTS = [
     description: "A site for a Coffee shop ",
     ctaLink: "https://github.com/AlexandreOSouza/coffee-shop",
     image: "./assets/projects/coffee.png",
+    react: true,
   },
   {
     title: "Project 4",
@@ -62,6 +75,9 @@ export const PROJECTS = [
       "My own NFT Marketplace build with React and Solidity based on Ethereum blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/nft-marketplace",
     image: "./assets/projects/my_mp.png",
+    react: true,
+    solidity: true,
+    eth: true,
   },
   {
     title: "Project 5",
@@ -70,6 +86,9 @@ export const PROJECTS = [
       "An App to upload videos to IPFS and store on the Ethereum blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/dvideo",
     image: "./assets/projects/dvideo.png",
+    react: true,
+    solidity: true,
+    eth: true,
   },
   {
     title: "Project 6",
@@ -78,6 +97,9 @@ export const PROJECTS = [
       "A memory game in that you can collect NFT when you find the matching one.",
     ctaLink: "https://github.com/AlexandreOSouza/dmemory",
     image: "./assets/projects/dmemory.png",
+    react: true,
+    solidity: true,
+    eth: true,
   },
   {
     title: "Project 7",
@@ -86,6 +108,9 @@ export const PROJECTS = [
       "A WEB3 Instagram clone where you can upload an image and the users can give you a tip.",
     ctaLink: "https://github.com/AlexandreOSouza/decentragram",
     image: "./assets/projects/decentagram.png",
+    react: true,
+    solidity: true,
+    eth: true,
   },
   {
     title: "Project 8",
@@ -93,6 +118,8 @@ export const PROJECTS = [
     description: "A site to store all my links.",
     ctaLink: "https://alexandre-links.herokuapp.com/",
     image: "./assets/projects/my-links.png",
+    html: true,
+    css: true,
   },
   {
     title: "Project 9",
@@ -100,12 +127,16 @@ export const PROJECTS = [
     description: "A SPA to mint a Robo Punks NFT.",
     ctaLink: "https://github.com/AlexandreOSouza/RoboPunks",
     image: "./assets/projects/robo-punks.png",
+    react: true,
+    solidity: true,
+    eth: true,
   },
   {
     title: "Project 10",
     subtitle: "_Generative_Images",
     description: "A POC to undertand the generative images process.",
     ctaLink: "https://github.com/AlexandreOSouza/Generative-Images",
+    node: true,
   },
   {
     title: "Project 11",
@@ -113,6 +144,7 @@ export const PROJECTS = [
     description: "An App to help yout with your financial life.",
     ctaLink: "https://github.com/AlexandreOSouza/dtmoney",
     image: "./assets/projects/dt-money.png",
+    react: true,
   },
   {
     title: "Project 12",
@@ -120,5 +152,6 @@ export const PROJECTS = [
     description: "Convert Dollar to Real(BR currency) in real time.",
     ctaLink: "https://github.com/AlexandreOSouza/dollar-price",
     image: "./assets/projects/dollar.png",
+    react: true,
   },
 ] as ProjectProps[];

@@ -1,10 +1,41 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import { RiReactjsLine } from "react-icons/ri";
+import { Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { useMemo } from "react";
+import { RiCss3Fill, RiHtml5Fill, RiReactjsLine } from "react-icons/ri";
+import { SiSolidity, SiTsnode, SiTypescript } from "react-icons/si";
+import { FaEthereum, FaNodeJs } from "react-icons/fa";
 import { ProjectProps } from "../../../../../helper/constants";
 import DefaultButton from "../../../../CTA/default";
 import CardIcon from "./card-icon";
 
 const ProjectCard = (props: ProjectProps) => {
+  const renderIcons = useMemo(() => {
+    return (
+      <Flex columnGap={2}>
+        {props.react && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<RiReactjsLine />} />
+        )}
+        {props.html && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<RiHtml5Fill />} />
+        )}
+        {props.css && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<RiCss3Fill />} />
+        )}
+        {props.css && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<SiSolidity />} />
+        )}
+        {props.node && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<FaNodeJs />} />
+        )}
+        {props.ts && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<SiTypescript />} />
+        )}
+        {props.eth && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<FaEthereum />} />
+        )}
+      </Flex>
+    );
+  }, []);
+
   return (
     <Flex justifyContent={"center"}>
       <Flex flexDirection={"column"}>
@@ -47,7 +78,7 @@ const ProjectCard = (props: ProjectProps) => {
             pt={"10px"}
             pr={"10px"}
           >
-            <CardIcon backgroundColor={"#86E1F9"} icon={<RiReactjsLine />} />
+            {renderIcons}
           </Flex>
           <Flex
             pt={"20px"}
