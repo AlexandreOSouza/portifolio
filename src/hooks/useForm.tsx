@@ -11,12 +11,19 @@ const FormContext = createContext({
   setName: (value: string) => {},
   setEmail: (value: string) => {},
   setMessage: (value: string) => {},
+  cleanForm: () => {},
 });
 
 export const FormContextProvider = ({ children }: Props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const cleanForm = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
     <FormContext.Provider
@@ -27,6 +34,7 @@ export const FormContextProvider = ({ children }: Props) => {
         setEmail,
         setName,
         setMessage,
+        cleanForm,
       }}
     >
       {children}
