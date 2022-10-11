@@ -21,7 +21,7 @@ const ContactForm = () => {
       flexDirection={"column"}
       width={emailSend ? "100%" : { base: "80vw", lg: "350px" }}
       maxWidth={emailSend ? "100%" : { base: "300px", lg: "" }}
-      mt={emailSend ? "100px" : ""}
+      mt={emailSend ? { base: "", lg: "100px" } : ""}
     >
       {!emailSend ? (
         <form onSubmit={handleSubmit} method={"POST"}>
