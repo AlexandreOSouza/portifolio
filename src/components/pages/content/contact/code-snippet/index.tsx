@@ -1,12 +1,9 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { useForm } from "../../../../../hooks/useForm";
 
-type Props = {
-  name: string;
-  email: string;
-  message: string;
-};
+const CodeSnippet = () => {
+  const { message, name, email } = useForm();
 
-const CodeSnippet = ({ name, email, message }: Props) => {
   const PinkText = ({ children }: any) => {
     return (
       <Text color={"accent.purple"}>
@@ -110,7 +107,11 @@ const CodeSnippet = ({ name, email, message }: Props) => {
         <CodeLine
           lineNumber={7}
           constText={"   date: "}
-          parameter={`"Thu 21 Apr"`}
+          parameter={`"${new Date().toLocaleDateString("en-us", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+          })}"`}
         />
         <CodeLine lineNumber={8} fistCommand={`}`} />
       </>
