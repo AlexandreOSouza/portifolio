@@ -107,7 +107,11 @@ const CodeSnippet = () => {
         <CodeLine
           lineNumber={7}
           constText={"   date: "}
-          parameter={`"Thu 21 Apr"`}
+          parameter={`"${new Date().toLocaleDateString("en-us", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+          })}"`}
         />
         <CodeLine lineNumber={8} fistCommand={`}`} />
       </>
