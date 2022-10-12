@@ -74,7 +74,11 @@ const ProjectCard = (props: ProjectProps) => {
             backgroundImage={props.image || "./assets/cards/game.jpeg"}
             backgroundPosition={"center"}
             backgroundSize={"cover"}
+            backgroundRepeat={"no-repeat"}
             justifyContent={"flex-end"}
+            style={{
+              backgroundPositionY: "1px",
+            }}
             pt={"10px"}
             pr={"10px"}
           >
