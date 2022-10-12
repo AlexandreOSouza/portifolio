@@ -20,7 +20,7 @@ const ProjectsList = () => {
         pr={"12px"}
         pl={"14px"}
       >
-        <Text textStyle={"label"}>React; CSS</Text>
+        <Text textStyle={"label"}>Showing {projects.length}</Text>
         <RiCloseFill />
       </Flex>
       <Box
