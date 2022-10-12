@@ -6,8 +6,9 @@ import {
   useCheckbox,
   chakra,
 } from "@chakra-ui/react";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import { RiCheckFill } from "react-icons/ri";
+import { useFilter } from "../../../../../hooks/useFilter";
 
 type Props = {
   title: any;
@@ -19,6 +20,7 @@ type Props = {
 const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
   const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
     useCheckbox();
+  const { updateFilterList } = useFilter();
 
   return (
     <chakra.label
@@ -27,6 +29,7 @@ const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
       alignItems="center"
       rounded="lg"
       cursor="pointer"
+      onClick={() => updateFilterList(title)}
       {...htmlProps}
     >
       <input {...getInputProps()} hidden />

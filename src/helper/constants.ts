@@ -25,21 +25,24 @@ export const PAGE_TITLE = {
   CONTACT: "alesouza.dev | Contact-me",
 };
 
+export type ProjectsFilters = {
+  react?: boolean;
+  solidity?: boolean;
+  nodejs?: boolean;
+  html?: boolean;
+  css?: boolean;
+  typescript?: boolean;
+  ethereum?: boolean;
+  popstand?: boolean;
+};
+
 export type ProjectProps = {
   title: string;
   subtitle: string;
   description: string;
   ctaLink: string;
   image?: string;
-  react?: boolean;
-  solidity?: boolean;
-  node?: boolean;
-  html?: boolean;
-  css?: boolean;
-  ts?: boolean;
-  eth?: boolean;
-  pop?: boolean;
-};
+} & ProjectsFilters;
 
 export const PROJECTS = [
   {
@@ -49,8 +52,8 @@ export const PROJECTS = [
     ctaLink: "https://ongaia.com/",
     image: "./assets/projects/gaia.png",
     react: true,
-    ts: true,
-    pop: true,
+    typescript: true,
+    popstand: true,
   },
   {
     title: "Project 2",
@@ -59,8 +62,8 @@ export const PROJECTS = [
     ctaLink: "https://www.rebelrabbits.io/",
     image: "./assets/projects/rr.png",
     react: true,
-    ts: true,
-    pop: true,
+    typescript: true,
+    popstand: true,
   },
   {
     title: "Project 3",
@@ -79,7 +82,7 @@ export const PROJECTS = [
     image: "./assets/projects/my_mp.png",
     react: true,
     solidity: true,
-    eth: true,
+    ethereum: true,
   },
   {
     title: "Project 5",
@@ -90,7 +93,7 @@ export const PROJECTS = [
     image: "./assets/projects/dvideo.png",
     react: true,
     solidity: true,
-    eth: true,
+    ethereum: true,
   },
   {
     title: "Project 6",
@@ -101,7 +104,7 @@ export const PROJECTS = [
     image: "./assets/projects/dmemory.png",
     react: true,
     solidity: true,
-    eth: true,
+    ethereum: true,
   },
   {
     title: "Project 7",
@@ -112,7 +115,7 @@ export const PROJECTS = [
     image: "./assets/projects/decentagram.png",
     react: true,
     solidity: true,
-    eth: true,
+    ethereum: true,
   },
   {
     title: "Project 8",
@@ -131,14 +134,14 @@ export const PROJECTS = [
     image: "./assets/projects/robo-punks.png",
     react: true,
     solidity: true,
-    eth: true,
+    ethereum: true,
   },
   {
     title: "Project 10",
     subtitle: "_Generative_Images",
     description: "A POC to undertand the generative images process.",
     ctaLink: "https://github.com/AlexandreOSouza/Generative-Images",
-    node: true,
+    nodejs: true,
   },
   {
     title: "Project 11",

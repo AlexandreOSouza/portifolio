@@ -21,16 +21,16 @@ const ProjectCard = (props: ProjectProps) => {
         {props.css && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<RiCss3Fill />} />
         )}
-        {props.node && (
+        {props.nodejs && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<FaNodeJs />} />
         )}
-        {props.ts && (
+        {props.typescript && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<SiTypescript />} />
         )}
-        {props.eth && (
+        {props.ethereum && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<FaEthereum />} />
         )}
-        {props.pop && (
+        {props.popstand && (
           <CardIcon
             backgroundColor={"#86E1F9"}
             icon={<MdOutlineWorkOutline />}

@@ -59,7 +59,7 @@ const ProjectsContent = () => {
                       <FilterItem title={"HTML"} icon={<RiHtml5Fill />} />
                       <FilterItem title={"CSS"} icon={<RiCss3Fill />} />
                       <FilterItem title={"Solidity"} icon={<SiSolidity />} />
-                      <FilterItem title={"Node JS"} icon={<FaNodeJs />} />
+                      <FilterItem title={"NodeJS"} icon={<FaNodeJs />} />
                       <FilterItem
                         title={"Typescript"}
                         icon={<SiTypescript />}
