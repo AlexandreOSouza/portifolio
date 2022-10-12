@@ -4,15 +4,18 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../theme";
 import { PageContextProvider } from "../hooks/usePages";
 import { FormContextProvider } from "../hooks/useForm";
+import { FilterContextProvider } from "../hooks/useFilter";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PageContextProvider>
-      <FormContextProvider>
-        <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
-      </FormContextProvider>
+      <FilterContextProvider>
+        <FormContextProvider>
+          <ChakraProvider theme={theme}>
+            <Component {...pageProps} />
+          </ChakraProvider>
+        </FormContextProvider>
+      </FilterContextProvider>
     </PageContextProvider>
   );
 }

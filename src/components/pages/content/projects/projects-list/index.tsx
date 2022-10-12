@@ -1,9 +1,11 @@
 import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
-import { PROJECTS } from "../../../../../helper/constants";
+import { useFilter } from "../../../../../hooks/useFilter";
 import ProjectCard from "../project-card";
 
 const ProjectsList = () => {
+  const { projects } = useFilter();
+
   return (
     <Flex flex={1} flexDirection={"column"}>
       <Flex
@@ -41,7 +43,7 @@ const ProjectsList = () => {
         pb={"70px"}
         justifyContent={"center"}
       >
-        {PROJECTS.map((project, index) => (
+        {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </Box>
