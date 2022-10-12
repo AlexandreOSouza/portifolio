@@ -9,11 +9,15 @@ type Props = {
 type ContextProps = {
   projects: ProjectProps[];
   updateFilterList: (name: string) => void;
+  filterList: string[];
+  cleanFilters: () => void;
 };
 
 const FilterContext = createContext<ContextProps>({
   projects: [],
   updateFilterList: (name: string) => {},
+  filterList: [],
+  cleanFilters: () => {},
 });
 
 export const FilterContextProvider = ({ children }: Props) => {
@@ -27,6 +31,11 @@ export const FilterContextProvider = ({ children }: Props) => {
     } else {
       setFilterList([...filterList, name]);
     }
+  };
+
+  const cleanFilters = () => {
+    setProjects(PROJECTS);
+    setFilterList([]);
   };
 
   useEffect(() => {
@@ -49,6 +58,8 @@ export const FilterContextProvider = ({ children }: Props) => {
       value={{
         projects: projects,
         updateFilterList,
+        filterList,
+        cleanFilters,
       }}
     >
       {children}

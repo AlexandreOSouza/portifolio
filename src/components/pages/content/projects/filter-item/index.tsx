@@ -19,12 +19,18 @@ type Props = {
 
 const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
   const [isChecked, setIsChecked] = useState(false);
-  const { updateFilterList } = useFilter();
+  const { updateFilterList, filterList } = useFilter();
 
   const handleClick = () => {
     setIsChecked((prevState) => !prevState);
     updateFilterList(title);
   };
+
+  useEffect(() => {
+    if (filterList.length === 0) {
+      setIsChecked(false);
+    }
+  }, [filterList]);
 
   return (
     <Flex
