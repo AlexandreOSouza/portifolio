@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { ProjectProps, PROJECTS, ProjectsFilters } from "../helper/constants";
 
@@ -20,20 +21,22 @@ export const FilterContextProvider = ({ children }: Props) => {
   const [filterList, setFilterList] = useState<string[]>([]);
 
   const updateFilterList = (name: string) => {
+    name = name.toLowerCase();
     if (filterList.includes(name)) {
       setFilterList(filterList.filter((e) => e != name));
     } else {
-      filterList.push(name);
+      setFilterList([...filterList, name]);
     }
   };
 
   useEffect(() => {
     if (filterList.length > 0) {
-      const filteredProjects = PROJECTS.filter((projects: ProjectProps) => {
-        return Object.keys(projects).filter((props) =>
-          filterList.includes(props)
-        );
-      });
+      console.log(filterList);
+      const filteredProjects = _.flatten(
+        _.map(filterList, function (item) {
+          return _.filter(PROJECTS, item);
+        })
+      );
       setProjects(filteredProjects);
     } else {
       setProjects(PROJECTS);
