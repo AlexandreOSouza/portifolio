@@ -48,7 +48,7 @@ const ProjectsContent = () => {
                   <AccordionPanel
                     background={"primary.mid"}
                     pl={"22px"}
-                    height={"600px"}
+                    height={{ base: "450px", lg: "600px" }}
                   >
                     <Flex
                       flexDir={"column"}
