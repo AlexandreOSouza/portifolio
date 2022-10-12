@@ -31,13 +31,14 @@ export const FilterContextProvider = ({ children }: Props) => {
 
   useEffect(() => {
     if (filterList.length > 0) {
-      console.log(filterList);
       const filteredProjects = _.flatten(
         _.map(filterList, function (item) {
           return _.filter(PROJECTS, item);
         })
       );
-      setProjects(filteredProjects);
+      const uniq = _.uniqBy(filteredProjects, (e) => e.id);
+      const orderProjects = _.orderBy(uniq, "id", "asc");
+      setProjects(orderProjects);
     } else {
       setProjects(PROJECTS);
     }

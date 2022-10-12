@@ -37,6 +37,7 @@ export type ProjectsFilters = {
 };
 
 export type ProjectProps = {
+  id: number;
   title: string;
   subtitle: string;
   description: string;
@@ -46,6 +47,7 @@ export type ProjectProps = {
 
 export const PROJECTS = [
   {
+    id: 1,
     title: "Project 1",
     subtitle: "_gaia_mp",
     description: "A NFT marketplace on the Flow blockchain.",
@@ -56,6 +58,7 @@ export const PROJECTS = [
     popstand: true,
   },
   {
+    id: 2,
     title: "Project 2",
     subtitle: "_rebel_rabbits",
     description: "Generative NFT that encapsulates the true spirit of crypto.",
@@ -66,6 +69,7 @@ export const PROJECTS = [
     popstand: true,
   },
   {
+    id: 3,
     title: "Project 3",
     subtitle: "_coffee_shop",
     description: "A site for a Coffee shop ",
@@ -74,6 +78,7 @@ export const PROJECTS = [
     react: true,
   },
   {
+    id: 4,
     title: "Project 4",
     subtitle: "_my_NFT_mp",
     description:
@@ -85,6 +90,7 @@ export const PROJECTS = [
     ethereum: true,
   },
   {
+    id: 5,
     title: "Project 5",
     subtitle: "_DVide0",
     description:
@@ -96,6 +102,7 @@ export const PROJECTS = [
     ethereum: true,
   },
   {
+    id: 6,
     title: "Project 6",
     subtitle: "_DMemory",
     description:
@@ -107,6 +114,7 @@ export const PROJECTS = [
     ethereum: true,
   },
   {
+    id: 7,
     title: "Project 7",
     subtitle: "_Decentragram",
     description:
@@ -118,6 +126,7 @@ export const PROJECTS = [
     ethereum: true,
   },
   {
+    id: 8,
     title: "Project 8",
     subtitle: "_My_links",
     description: "A site to store all my links.",
@@ -127,6 +136,7 @@ export const PROJECTS = [
     css: true,
   },
   {
+    id: 9,
     title: "Project 9",
     subtitle: "_Robo_Punks",
     description: "A SPA to mint a Robo Punks NFT.",
@@ -137,6 +147,7 @@ export const PROJECTS = [
     ethereum: true,
   },
   {
+    id: 10,
     title: "Project 10",
     subtitle: "_Generative_Images",
     description: "A POC to undertand the generative images process.",
@@ -144,6 +155,7 @@ export const PROJECTS = [
     nodejs: true,
   },
   {
+    id: 11,
     title: "Project 11",
     subtitle: "_Dt_Money",
     description: "An App to help yout with your financial life.",
@@ -152,6 +164,7 @@ export const PROJECTS = [
     react: true,
   },
   {
+    id: 12,
     title: "Project 12",
     subtitle: "_Dollar_to_Real",
     description: "Convert Dollar to Real(BR currency) in real time.",
