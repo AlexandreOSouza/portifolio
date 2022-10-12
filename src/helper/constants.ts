@@ -38,6 +38,7 @@ export type ProjectProps = {
   css?: boolean;
   ts?: boolean;
   eth?: boolean;
+  pop?: boolean;
 };
 
 export const PROJECTS = [
@@ -49,6 +50,7 @@ export const PROJECTS = [
     image: "./assets/projects/gaia.png",
     react: true,
     ts: true,
+    pop: true,
   },
   {
     title: "Project 2",
@@ -58,7 +60,7 @@ export const PROJECTS = [
     image: "./assets/projects/rr.png",
     react: true,
     ts: true,
-    eth: true,
+    pop: true,
   },
   {
     title: "Project 3",

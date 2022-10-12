@@ -6,6 +6,7 @@ import { FaEthereum, FaNodeJs } from "react-icons/fa";
 import { ProjectProps } from "../../../../../helper/constants";
 import DefaultButton from "../../../../CTA/default";
 import CardIcon from "./card-icon";
+import { MdOutlineWorkOutline } from "react-icons/md";
 
 const ProjectCard = (props: ProjectProps) => {
   const renderIcons = useMemo(() => {
@@ -20,9 +21,6 @@ const ProjectCard = (props: ProjectProps) => {
         {props.css && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<RiCss3Fill />} />
         )}
-        {props.css && (
-          <CardIcon backgroundColor={"#86E1F9"} icon={<SiSolidity />} />
-        )}
         {props.node && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<FaNodeJs />} />
         )}
@@ -31,6 +29,15 @@ const ProjectCard = (props: ProjectProps) => {
         )}
         {props.eth && (
           <CardIcon backgroundColor={"#86E1F9"} icon={<FaEthereum />} />
+        )}
+        {props.pop && (
+          <CardIcon
+            backgroundColor={"#86E1F9"}
+            icon={<MdOutlineWorkOutline />}
+          />
+        )}
+        {props.solidity && (
+          <CardIcon backgroundColor={"#86E1F9"} icon={<SiSolidity />} />
         )}
       </Flex>
     );

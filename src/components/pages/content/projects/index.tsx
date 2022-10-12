@@ -7,6 +7,8 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { FaEthereum, FaNodeJs } from "react-icons/fa";
+import { MdOutlineWorkOutline } from "react-icons/md";
+
 import {
   RiCss3Fill,
   RiHtml5Fill,
@@ -49,6 +51,10 @@ const ProjectsContent = () => {
 
                   <AccordionPanel background={"primary.mid"} pl={"22px"}>
                     <Flex rowGap={"20px"} flexDir={"column"} pt={"20px"}>
+                      <FilterItem
+                        title={"Popstand"}
+                        icon={<MdOutlineWorkOutline />}
+                      />
                       <FilterItem title={"React"} icon={<RiReactjsFill />} />
                       <FilterItem title={"HTML"} icon={<RiHtml5Fill />} />
                       <FilterItem title={"CSS"} icon={<RiCss3Fill />} />
