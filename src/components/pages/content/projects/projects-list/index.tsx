@@ -1,10 +1,26 @@
-import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
 import { useFilter } from "../../../../../hooks/useFilter";
 import ProjectCard from "../project-card";
 
 const ProjectsList = () => {
   const { projects } = useFilter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex flex={1} flexDirection={"column"}>
@@ -44,9 +60,26 @@ const ProjectsList = () => {
         justifyContent={"center"}
       >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} onOpen={onOpen} {...project} />
         ))}
       </Box>
+      <>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody></ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={onClose}>
+                Close
+              </Button>
+              <Button variant="ghost">Secondary Action</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
     </Flex>
   );
 };

@@ -8,7 +8,11 @@ import DefaultButton from "../../../../CTA/default";
 import CardIcon from "./card-icon";
 import { MdOutlineWorkOutline } from "react-icons/md";
 
-const ProjectCard = (props: ProjectProps) => {
+type Props = ProjectProps & {
+  onOpen: () => void;
+};
+
+const ProjectCard = ({ onOpen, ...props }: Props) => {
   const renderIcons = useMemo(() => {
     return (
       <Flex columnGap={2}>
@@ -73,6 +77,12 @@ const ProjectCard = (props: ProjectProps) => {
           borderColor={"lines.main"}
           flexDir={"column"}
           mt={"15px"}
+          cursor={"pointer"}
+          onClick={onOpen}
+          _hover={{
+            mt: "10px",
+            boxShadow: "6px 1px 33px -4px rgba(85, 101, 232,0.2)",
+          }}
         >
           <Flex
             height={"45%"}
