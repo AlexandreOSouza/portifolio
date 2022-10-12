@@ -34,7 +34,7 @@ const ProjectCard = (props: ProjectProps) => {
         )}
       </Flex>
     );
-  }, []);
+  }, [props]);
 
   return (
     <Flex justifyContent={"center"}>
@@ -81,9 +81,7 @@ const ProjectCard = (props: ProjectProps) => {
             }}
             pt={"10px"}
             pr={"10px"}
-          >
-            {renderIcons}
-          </Flex>
+          ></Flex>
           <Flex
             pt={"20px"}
             pb={"30px"}
@@ -98,9 +96,16 @@ const ProjectCard = (props: ProjectProps) => {
             <Text color={"secondary.gray"} fontSize={"14px"}>
               {props.description}
             </Text>
-            <a href={props.ctaLink} target={"_blank"} rel="noreferrer">
-              <DefaultButton width={"130px"}>view-project</DefaultButton>
-            </a>
+            <Flex
+              flexDirection={"row-reverse"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
+            >
+              {renderIcons}
+              <a href={props.ctaLink} target={"_blank"} rel="noreferrer">
+                <DefaultButton width={"130px"}>view-project</DefaultButton>
+              </a>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
