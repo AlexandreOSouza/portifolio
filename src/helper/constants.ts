@@ -64,25 +64,25 @@ export const PROJECTS = [
     owner: "NFT Genius",
     ctaLinkOwner: "https://www.nftgenius.com/",
     ctaLink: "https://ongaia.com/",
-    image: "./assets/projects/gaia.png",
+    image: "./assets/projects/gaia.webp",
     react: true,
     typescript: true,
     popstand: true,
     slideImage: [
       {
-        src: "./assets/projects/gaia/gaia-1.png",
+        src: "./assets/projects/gaia/gaia-1.webp",
         alt: "image 1",
       },
       {
-        src: "./assets/projects/gaia/gaia-2.png",
+        src: "./assets/projects/gaia/gaia-2.webp",
         alt: "image 2",
       },
       {
-        src: "../assets/projects/gaia/gaia-3.png",
+        src: "../assets/projects/gaia/gaia-3.webp",
         alt: "image 3",
       },
       {
-        src: "../assets/projects/gaia/gaia-4.png",
+        src: "../assets/projects/gaia/gaia-4.webp",
         alt: "image 4",
       },
     ],
@@ -93,7 +93,7 @@ export const PROJECTS = [
     subtitle: "_rebel_rabbits",
     description: "Generative NFT that encapsulates the true spirit of crypto.",
     ctaLink: "https://www.rebelrabbits.io/",
-    image: "./assets/projects/rr.png",
+    image: "./assets/projects/rr.webp",
     react: true,
     typescript: true,
     popstand: true,
@@ -102,19 +102,19 @@ export const PROJECTS = [
     text: "A generative NFT set that encapsulates the true spirit of crypto and represents all the rebels participating in this decentralized revolution.",
     slideImage: [
       {
-        src: "./assets/projects/gaia/gaia-1.png",
+        src: "./assets/projects/gaia/gaia-1.webp",
         alt: "image 1",
       },
       {
-        src: "./assets/projects/gaia/gaia-2.png",
+        src: "./assets/projects/gaia/gaia-2.webp",
         alt: "image 2",
       },
       {
-        src: "../assets/projects/gaia/gaia-3.png",
+        src: "../assets/projects/gaia/gaia-3.webp",
         alt: "image 3",
       },
       {
-        src: "../assets/projects/gaia/gaia-4.png",
+        src: "../assets/projects/gaia/gaia-4.webp",
         alt: "image 4",
       },
     ],
@@ -125,7 +125,7 @@ export const PROJECTS = [
     subtitle: "_coffee_shop",
     description: "A site for a Coffee shop ",
     ctaLink: "https://github.com/AlexandreOSouza/coffee-shop",
-    image: "./assets/projects/coffee.png",
+    image: "./assets/projects/coffee.webp",
     react: true,
   },
   {
@@ -135,7 +135,7 @@ export const PROJECTS = [
     description:
       "My own NFT Marketplace build with React and Solidity based on Ethereum blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/nft-marketplace",
-    image: "./assets/projects/my_mp.png",
+    image: "./assets/projects/my_mp.webp",
     react: true,
     solidity: true,
     ethereum: true,
@@ -147,7 +147,7 @@ export const PROJECTS = [
     description:
       "An App to upload videos to IPFS and store on the Ethereum blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/dvideo",
-    image: "./assets/projects/dvideo.png",
+    image: "./assets/projects/dvideo.webp",
     react: true,
     solidity: true,
     ethereum: true,
@@ -159,7 +159,7 @@ export const PROJECTS = [
     description:
       "A memory game in that you can collect NFT when you find the matching one.",
     ctaLink: "https://github.com/AlexandreOSouza/dmemory",
-    image: "./assets/projects/dmemory.png",
+    image: "./assets/projects/dmemory.webp",
     react: true,
     solidity: true,
     ethereum: true,
@@ -171,7 +171,7 @@ export const PROJECTS = [
     description:
       "A WEB3 Instagram clone where you can upload an image and the users can give you a tip.",
     ctaLink: "https://github.com/AlexandreOSouza/decentragram",
-    image: "./assets/projects/decentagram.png",
+    image: "./assets/projects/decentagram.webp",
     react: true,
     solidity: true,
     ethereum: true,
@@ -182,7 +182,7 @@ export const PROJECTS = [
     subtitle: "_My_links",
     description: "A site to store all my links.",
     ctaLink: "https://alexandre-links.herokuapp.com/",
-    image: "./assets/projects/my-links.png",
+    image: "./assets/projects/my-links.webp",
     html: true,
     css: true,
   },
@@ -192,7 +192,7 @@ export const PROJECTS = [
     subtitle: "_Robo_Punks",
     description: "A SPA to mint a Robo Punks NFT.",
     ctaLink: "https://github.com/AlexandreOSouza/RoboPunks",
-    image: "./assets/projects/robo-punks.png",
+    image: "./assets/projects/robo-punks.webp",
     react: true,
     solidity: true,
     ethereum: true,
@@ -211,7 +211,7 @@ export const PROJECTS = [
     subtitle: "_Dt_Money",
     description: "An App to help yout with your financial life.",
     ctaLink: "https://github.com/AlexandreOSouza/dtmoney",
-    image: "./assets/projects/dt-money.png",
+    image: "./assets/projects/dt-money.webp",
     react: true,
   },
   {
@@ -220,7 +220,7 @@ export const PROJECTS = [
     subtitle: "_Dollar_to_Real",
     description: "Convert Dollar to Real(BR currency) in real time.",
     ctaLink: "https://github.com/AlexandreOSouza/dollar-price",
-    image: "./assets/projects/dollar.png",
+    image: "./assets/projects/dollar.webp",
     react: true,
   },
 ] as ProjectProps[];
