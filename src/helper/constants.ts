@@ -36,13 +36,22 @@ export type ProjectsFilters = {
   popstand?: boolean;
 };
 
+export type SlideImages = {
+  src: string;
+  alt: string;
+};
+
 export type ProjectProps = {
   id: number;
   title: string;
   subtitle: string;
+  text: string;
+  owner: string;
+  ctaLinkOwner: string;
   description: string;
   ctaLink: string;
   image?: string;
+  slideImage?: SlideImages[];
 } & ProjectsFilters;
 
 export const PROJECTS = [
@@ -51,11 +60,32 @@ export const PROJECTS = [
     title: "Project 1",
     subtitle: "_gaia_mp",
     description: "A NFT marketplace on the Flow blockchain.",
+    text: "A world-class NFT marketplace on the Flow blockchain. This will house NFTs from some of the world’s best brands, athletes, musicians, and artists.",
+    owner: "NFT Genius",
+    ctaLinkOwner: "https://www.nftgenius.com/",
     ctaLink: "https://ongaia.com/",
     image: "./assets/projects/gaia.png",
     react: true,
     typescript: true,
     popstand: true,
+    slideImage: [
+      {
+        src: "./assets/projects/gaia/gaia-1.png",
+        alt: "image 1",
+      },
+      {
+        src: "./assets/projects/gaia/gaia-2.png",
+        alt: "image 2",
+      },
+      {
+        src: "../assets/projects/gaia/gaia-3.png",
+        alt: "image 3",
+      },
+      {
+        src: "../assets/projects/gaia/gaia-4.png",
+        alt: "image 4",
+      },
+    ],
   },
   {
     id: 2,
@@ -67,6 +97,27 @@ export const PROJECTS = [
     react: true,
     typescript: true,
     popstand: true,
+    owner: "NFT Genius",
+    ctaLinkOwner: "https://www.nftgenius.com/",
+    text: "A generative NFT set that encapsulates the true spirit of crypto and represents all the rebels participating in this decentralized revolution.",
+    slideImage: [
+      {
+        src: "./assets/projects/gaia/gaia-1.png",
+        alt: "image 1",
+      },
+      {
+        src: "./assets/projects/gaia/gaia-2.png",
+        alt: "image 2",
+      },
+      {
+        src: "../assets/projects/gaia/gaia-3.png",
+        alt: "image 3",
+      },
+      {
+        src: "../assets/projects/gaia/gaia-4.png",
+        alt: "image 4",
+      },
+    ],
   },
   {
     id: 3,

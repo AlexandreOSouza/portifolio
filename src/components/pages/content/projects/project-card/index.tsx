@@ -9,7 +9,7 @@ import CardIcon from "./card-icon";
 import { MdOutlineWorkOutline } from "react-icons/md";
 
 type Props = ProjectProps & {
-  onOpen: () => void;
+  onOpen: (projectId: number) => void;
 };
 
 const ProjectCard = ({ onOpen, ...props }: Props) => {
@@ -78,7 +78,7 @@ const ProjectCard = ({ onOpen, ...props }: Props) => {
           flexDir={"column"}
           mt={"15px"}
           cursor={"pointer"}
-          onClick={onOpen}
+          onClick={() => onOpen(props.id)}
           _hover={{
             mt: "10px",
           }}

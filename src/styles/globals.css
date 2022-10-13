@@ -55,3 +55,7 @@ body {
   margin-left: 10px;
   background: transparent !important;
 }
+
+.default-nav > svg {
+  color: white;
+}
