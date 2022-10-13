@@ -75,20 +75,16 @@ export const PROJECTS = [
     text: "A generative NFT set that encapsulates the true spirit of crypto and represents all the rebels participating in this decentralized revolution.",
     slideImage: [
       {
-        src: "./assets/projects/gaia/gaia-1.webp",
+        src: "./assets/projects/rr/rr-1.webp",
         alt: "image 1",
       },
       {
-        src: "./assets/projects/gaia/gaia-2.webp",
+        src: "./assets/projects/rr/rr-2.webp",
         alt: "image 2",
       },
       {
-        src: "../assets/projects/gaia/gaia-3.webp",
+        src: "./assets/projects/rr/rr-3.webp",
         alt: "image 3",
-      },
-      {
-        src: "../assets/projects/gaia/gaia-4.webp",
-        alt: "image 4",
       },
     ],
   },
