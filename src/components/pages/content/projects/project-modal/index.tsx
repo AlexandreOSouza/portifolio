@@ -14,7 +14,7 @@ import {
 import DefaultButton from "../../../../CTA/default";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { PROJECTS } from "../../../../../helper/constants";
+import { PROJECTS } from "../../../../../helper/constants/projects";
 
 type Props = {
   isOpen: boolean;

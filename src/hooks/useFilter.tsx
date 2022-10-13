@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { ProjectProps, PROJECTS, ProjectsFilters } from "../helper/constants";
+import { ProjectProps, PROJECTS } from "../helper/constants/projects";
 
 type Props = {
   children: React.ReactNode;
