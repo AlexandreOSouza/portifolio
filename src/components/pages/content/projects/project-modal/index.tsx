@@ -9,15 +9,58 @@ import {
   Button,
   Text,
   Flex,
+  Box,
 } from "@chakra-ui/react";
 import DefaultButton from "../../../../CTA/default";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
 };
 
+const slideImages = [
+  {
+    url: "./assets/projects/coffee.png",
+    caption: "Slide 1",
+  },
+  {
+    url: "./assets/projects/coffee.png",
+    caption: "Slide 2",
+  },
+  {
+    url: "./assets/projects/coffee.png",
+    caption: "Slide 3",
+  },
+];
+
+const properties = {
+  duration: 3000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  arrows: true,
+  pauseOnHover: true,
+};
+
 const ProjectModal = ({ isOpen, onClose }: Props) => {
+  const Slideshow = () => {
+    return (
+      <Box className="slide-container" width={"100%"} height={"100%"}>
+        <Slide {...properties}>
+          {slideImages.map((slideImage, index) => (
+            <Box className="each-slide" key={index} height={"230px"}>
+              <Box
+                style={{ backgroundImage: `url(${slideImage.url})` }}
+                height={"100%"}
+              ></Box>
+            </Box>
+          ))}
+        </Slide>
+      </Box>
+    );
+  };
   return (
     <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
       <ModalOverlay />
@@ -25,7 +68,9 @@ const ProjectModal = ({ isOpen, onClose }: Props) => {
         background={"primary.mid"}
         border={"1px solid"}
         borderColor={"lines.main"}
-        height={"80vh"}
+        height={"95vh"}
+        mt={"1vh"}
+        maxH={"729px"}
       >
         <ModalHeader>
           <Text color={"secondary.gray"}>Modal Title</Text>
@@ -38,7 +83,7 @@ const ProjectModal = ({ isOpen, onClose }: Props) => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Text color={"secondary.gray"}>photo slide</Text>
+            {Slideshow()}
           </Flex>
           <Flex
             width={"100%"}

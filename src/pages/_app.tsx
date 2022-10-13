@@ -5,6 +5,7 @@ import theme from "../theme";
 import { PageContextProvider } from "../hooks/usePages";
 import { FormContextProvider } from "../hooks/useForm";
 import { FilterContextProvider } from "../hooks/useFilter";
+import "react-slideshow-image/dist/styles.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
