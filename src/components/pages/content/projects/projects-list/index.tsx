@@ -17,6 +17,7 @@ import {
 import { RiCloseFill } from "react-icons/ri";
 import { useFilter } from "../../../../../hooks/useFilter";
 import ProjectCard from "../project-card";
+import ProjectModal from "../project-modal";
 
 const ProjectsList = () => {
   const { projects } = useFilter();
@@ -63,23 +64,7 @@ const ProjectsList = () => {
           <ProjectCard key={index} onOpen={onOpen} {...project} />
         ))}
       </Box>
-      <>
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody></ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </>
+      <ProjectModal isOpen={isOpen} onClose={onClose} />
     </Flex>
   );
 };
