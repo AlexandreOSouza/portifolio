@@ -24,6 +24,7 @@ export type ProjectProps = {
   description: string;
   ctaLink: string;
   image?: string;
+  myWork?: string;
   slideImage?: SlideImages[];
 } & ProjectsFilters;
 
@@ -96,6 +97,25 @@ export const PROJECTS = [
     ctaLink: "https://github.com/AlexandreOSouza/coffee-shop",
     image: "./assets/projects/coffee.webp",
     react: true,
+    text: "A site for a Coffee shop develop with NextJS and Chakra-UI. The Design is a free Figma template.",
+    owner: "Figma template",
+    myWork: "I was responsible to develop this website",
+    ctaLinkOwner:
+      "https://www.figma.com/file/jG5biMxY82I3kJd87MiojV/Cafe-Street---E-Commerce-Landing-Page-(Community)?node-id=6%3A21",
+    slideImage: [
+      {
+        src: "./assets/projects/coffee/coffee-1.png",
+        alt: "image 1",
+      },
+      {
+        src: "./assets/projects/coffee/coffee-2.png",
+        alt: "image 2",
+      },
+      {
+        src: "./assets/projects/coffee/coffee-3.png",
+        alt: "image 3",
+      },
+    ],
   },
   {
     id: 4,
@@ -154,6 +174,15 @@ export const PROJECTS = [
     image: "./assets/projects/my-links.webp",
     html: true,
     css: true,
+    text: "A site to store all my links like link tree. This site was develop with HTML, CSS & JavaScript",
+    owner: "Open Source",
+    ctaLinkOwner: "https://alexandre-links.herokuapp.com/",
+    slideImage: [
+      {
+        src: "./assets/projects/my-links.webp",
+        alt: "Image 1",
+      },
+    ],
   },
   {
     id: 9,
@@ -165,6 +194,17 @@ export const PROJECTS = [
     react: true,
     solidity: true,
     ethereum: true,
+    text: "Its 2078. Can the Robo Punks NFT save humans from destructive rempant NFT speculation? Mint Robo Punks to find out.",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/RoboPunks",
+    myWork: "I was responsible to develop this app and the smart contract",
+
+    slideImage: [
+      {
+        src: "./assets/projects/robo-punks.webp",
+        alt: "Image 1",
+      },
+    ],
   },
   {
     id: 10,

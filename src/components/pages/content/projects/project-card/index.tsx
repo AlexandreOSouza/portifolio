@@ -3,10 +3,10 @@ import { useMemo } from "react";
 import { RiCss3Fill, RiHtml5Fill, RiReactjsLine } from "react-icons/ri";
 import { SiSolidity, SiTsnode, SiTypescript } from "react-icons/si";
 import { FaEthereum, FaNodeJs } from "react-icons/fa";
-import { ProjectProps } from "../../../../../helper/constants";
 import DefaultButton from "../../../../CTA/default";
 import CardIcon from "./card-icon";
 import { MdOutlineWorkOutline } from "react-icons/md";
+import { ProjectProps } from "../../../../../helper/constants/projects";
 
 type Props = ProjectProps & {
   onOpen: (projectId: number) => void;

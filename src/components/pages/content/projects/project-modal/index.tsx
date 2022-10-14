@@ -77,8 +77,7 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
         background={"primary.mid"}
         border={"1px solid"}
         borderColor={"lines.main"}
-        height={"80vh"}
-        mt={"1vh"}
+        height={"70vh"}
         maxH={"729px"}
       >
         <ModalHeader>
@@ -105,6 +104,7 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
               fontSize={"14px"}
               textAlign={"justify"}
               color={"secondary.midGray"}
+              maxWidth={"100%"}
             >
               {project?.text}
             </Text>
@@ -127,22 +127,30 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
               </a>
             </Flex>
             <Flex mt={"10px"}>
-              <Text color={"primary.blue"} fontWeight={"600"}>
-                I was working as a Frontend Developer for:
-              </Text>
-              <a
-                href={"https://popstand.com/"}
-                target={"_blank"}
-                rel="noreferrer"
-              >
-                <Text
-                  color={"secondary.gray"}
-                  textDecoration={"underline"}
-                  ml={"5px"}
-                >
-                  Popstand
+              {project?.myWork ? (
+                <Text color={"primary.blue"} fontWeight={"600"}>
+                  {project?.myWork}
                 </Text>
-              </a>
+              ) : (
+                <>
+                  <Text color={"primary.blue"} fontWeight={"600"}>
+                    I was working as a Frontend Developer for:
+                  </Text>
+                  <a
+                    href={"https://popstand.com/"}
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <Text
+                      color={"secondary.gray"}
+                      textDecoration={"underline"}
+                      ml={"5px"}
+                    >
+                      Popstand
+                    </Text>
+                  </a>
+                </>
+              )}
             </Flex>
           </Flex>
         </ModalBody>
