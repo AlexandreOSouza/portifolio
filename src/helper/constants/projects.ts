@@ -128,7 +128,8 @@ export const PROJECTS = [
     react: true,
     solidity: true,
     text: "My own NFT Marketplace build with React and Solidity based on Polygon blockchain. The smart contract was develop with hardhat and deployed at mumbai testnet.",
-    owner: "My self",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/nft-marketplace",
     myWork: "I was responsible to develop this website and the smart contract.",
     slideImage: [
       {
@@ -149,7 +150,8 @@ export const PROJECTS = [
     solidity: true,
     ethereum: true,
     text: "An App to upload videos to IPFS and store on the Ethereum blockchain. The smart contract was develop with truffle and deployed at Ethereum testnet.",
-    owner: "My self",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/dvideo",
     myWork: "I was responsible to develop this website and the smart contract.",
     slideImage: [
       {
@@ -174,7 +176,8 @@ export const PROJECTS = [
     solidity: true,
     ethereum: true,
     text: "A memory game that you can an collect NFT when you find the matching one. The smart contract was develop with truffle and deployed at Ethereum testnet.",
-    owner: "My self",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/dmemory",
     myWork: "I was responsible to develop this website and the smart contract.",
     slideImage: [
       {
@@ -195,7 +198,8 @@ export const PROJECTS = [
     solidity: true,
     ethereum: true,
     text: "A WEB3 Instagram clone where you can upload an image and the users can give you a tip. The smart contract was develop with truffle and deployed at Ethereum testnet.",
-    owner: "My self",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/decentragram",
     myWork: "I was responsible to develop this website and the smart contract.",
     slideImage: [
       {
@@ -260,6 +264,21 @@ export const PROJECTS = [
     description: "A POC to undertand the generative images process.",
     ctaLink: "https://github.com/AlexandreOSouza/Generative-Images",
     nodejs: true,
+    text: "A POC to undertand the generative images process. With this app I was able to create a full NFT collection in Open Sea with generated images. https://opensea.io/collection/generative-magic-colletcion",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/Generative-Images",
+    myWork: "I was responsible to develop this app",
+
+    slideImage: [
+      {
+        src: "./assets/projects/gene/gene-1.webp",
+        alt: "Image 1",
+      },
+      {
+        src: "./assets/projects/gene/gene-2.webp",
+        alt: "Image 2",
+      },
+    ],
   },
   {
     id: 11,
@@ -269,6 +288,17 @@ export const PROJECTS = [
     ctaLink: "https://github.com/AlexandreOSouza/dtmoney",
     image: "./assets/projects/dt-money.webp",
     react: true,
+    text: "An App to help yout with your financial life Develop with React & Styled components.",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/dtmoney",
+    myWork: "I was responsible to develop this app",
+
+    slideImage: [
+      {
+        src: "./assets/projects/dt-money.webp",
+        alt: "Image 1",
+      },
+    ],
   },
   {
     id: 12,
@@ -278,5 +308,16 @@ export const PROJECTS = [
     ctaLink: "https://github.com/AlexandreOSouza/dollar-price",
     image: "./assets/projects/dollar.webp",
     react: true,
+    text: "Convert Dollar to Real(BR currency) in real time. Develop with React & Styled components.",
+    owner: "Open Source",
+    ctaLinkOwner: "https://github.com/AlexandreOSouza/dollar-price",
+    myWork: "I was responsible to develop this app",
+
+    slideImage: [
+      {
+        src: "./assets/projects/dollar.webp",
+        alt: "Image 1",
+      },
+    ],
   },
 ] as ProjectProps[];
