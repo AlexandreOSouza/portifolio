@@ -37,3 +37,25 @@ body {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+.each-slideshow-indicator::before {
+  background: #607b96 !important;
+}
+
+.chakra-modal__content-container {
+  overflow: hidden !important;
+}
+
+.default-nav:last-of-type {
+  margin-right: 10px;
+  background: transparent !important;
+}
+
+.default-nav:first-of-type {
+  margin-left: 10px;
+  background: transparent !important;
+}
+
+.default-nav > svg {
+  color: white;
+}

@@ -6,8 +6,9 @@ import {
   useCheckbox,
   chakra,
 } from "@chakra-ui/react";
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { RiCheckFill } from "react-icons/ri";
+import { useFilter } from "../../../../../hooks/useFilter";
 
 type Props = {
   title: any;
@@ -17,19 +18,29 @@ type Props = {
 };
 
 const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
-  const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
-    useCheckbox();
+  const [isChecked, setIsChecked] = useState(false);
+  const { updateFilterList, filterList } = useFilter();
+
+  const handleClick = () => {
+    setIsChecked((prevState) => !prevState);
+    updateFilterList(title);
+  };
+
+  useEffect(() => {
+    if (filterList.length === 0) {
+      setIsChecked(false);
+    }
+  }, [filterList]);
 
   return (
-    <chakra.label
+    <Flex
       display="flex"
       flexDirection="row"
       alignItems="center"
       rounded="lg"
       cursor="pointer"
-      {...htmlProps}
+      onClick={handleClick}
     >
-      <input {...getInputProps()} hidden />
       <Flex
         alignItems="center"
         justifyContent="center"
@@ -38,9 +49,8 @@ const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
         borderRadius={"2px"}
         w={4}
         h={4}
-        {...getCheckboxProps()}
       >
-        {state.isChecked && (
+        {isChecked && (
           <Flex
             width={"100%"}
             height={"100%"}
@@ -56,7 +66,7 @@ const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
         color={"secondary.gray"}
         ml={"24px"}
         fontSize={"16px"}
-        filter={state.isChecked ? "none" : "brightness(0.5)"}
+        filter={isChecked ? "none" : "brightness(0.5)"}
       >
         {icon}
       </Flex>
@@ -64,12 +74,12 @@ const FilterItem = ({ title, icon, onClick, isActive = false }: Props) => {
       <Text
         ml={"10px"}
         fontSize={"16px"}
-        color={state.isChecked ? "white" : "secondary.gray"}
+        color={isChecked ? "white" : "secondary.gray"}
         className={"noselect"}
       >
         {title}
       </Text>
-    </chakra.label>
+    </Flex>
   );
 };
 

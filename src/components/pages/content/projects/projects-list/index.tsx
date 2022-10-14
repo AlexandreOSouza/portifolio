@@ -1,8 +1,35 @@
-import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
+import { useFilter } from "../../../../../hooks/useFilter";
 import ProjectCard from "../project-card";
+import ProjectModal from "../project-modal";
 
 const ProjectsList = () => {
+  const { projects } = useFilter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedProject, setSelectedProject] = useState<number>();
+
+  const handleOpenModal = (projectId: number) => {
+    onOpen();
+    setSelectedProject(projectId);
+  };
+
   return (
     <Flex flex={1} flexDirection={"column"}>
       <Flex
@@ -17,7 +44,7 @@ const ProjectsList = () => {
         pr={"12px"}
         pl={"14px"}
       >
-        <Text textStyle={"label"}>React; CSS</Text>
+        <Text textStyle={"label"}>Showing {projects.length}</Text>
         <RiCloseFill />
       </Flex>
       <Box
@@ -40,11 +67,15 @@ const ProjectsList = () => {
         pb={"70px"}
         justifyContent={"center"}
       >
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} onOpen={handleOpenModal} {...project} />
+        ))}
       </Box>
+      <ProjectModal
+        isOpen={isOpen}
+        onClose={onClose}
+        projectId={selectedProject}
+      />
     </Flex>
   );
 };

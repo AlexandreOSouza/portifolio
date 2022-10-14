@@ -1,7 +1,7 @@
 export const PAGE_URL = {
   1: "home",
   2: "about",
-  3: "project",
+  3: "projects",
   4: "contact",
 };
 
