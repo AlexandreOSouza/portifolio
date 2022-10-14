@@ -12,7 +12,16 @@ type Props = ProjectProps & {
   onOpen: (projectId: number) => void;
 };
 
+const CLICK_NAME = "view-project";
+
 const ProjectCard = ({ onOpen, ...props }: Props) => {
+  const handleClick = (e: any) => {
+    const clickName = e.name;
+    if (clickName !== CLICK_NAME) {
+      onOpen(props.id);
+    }
+  };
+
   const renderIcons = useMemo(() => {
     return (
       <Flex columnGap={2}>
@@ -78,7 +87,7 @@ const ProjectCard = ({ onOpen, ...props }: Props) => {
           flexDir={"column"}
           mt={"15px"}
           cursor={"pointer"}
-          onClick={() => onOpen(props.id)}
+          onClick={(e) => handleClick(e.target)}
           _hover={{
             mt: "10px",
           }}
@@ -118,8 +127,15 @@ const ProjectCard = ({ onOpen, ...props }: Props) => {
               justifyContent={"space-between"}
             >
               {renderIcons}
-              <a href={props.ctaLink} target={"_blank"} rel="noreferrer">
-                <DefaultButton width={"130px"}>view-project</DefaultButton>
+              <a
+                href={props.ctaLink}
+                target={"_blank"}
+                rel="noreferrer"
+                style={{ zIndex: 2 }}
+              >
+                <DefaultButton name={CLICK_NAME} width={"130px"}>
+                  view-project
+                </DefaultButton>
               </a>
             </Flex>
           </Flex>
