@@ -41,7 +41,6 @@ const properties = {
   duration: 3000,
   transitionDuration: 500,
   infinite: true,
-  indicators: true,
   arrows: true,
   pauseOnHover: true,
 };
@@ -77,8 +76,8 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
         background={"primary.mid"}
         border={"1px solid"}
         borderColor={"lines.main"}
-        height={"80vh"}
-        maxH={"729px"}
+        height={{ base: "100vh", lg: "80vh" }}
+        mt={{ base: "0", md: "auto" }}
       >
         <ModalHeader>
           <Text color={"secondary.gray"}>{project?.subtitle}</Text>
@@ -87,7 +86,7 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
         <ModalBody p={0}>
           <Flex
             width={"100%"}
-            height={"45%"}
+            height={{ base: "", lg: "45%" }}
             justifyContent={"center"}
             alignItems={"center"}
           >
@@ -95,10 +94,10 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
           </Flex>
           <Flex
             width={"100%"}
-            height={"55%"}
+            height={{ base: "", lg: "55%" }}
             px={"20px"}
             flexDirection={"column"}
-            mt={"70px"}
+            mt={{ base: "10px", lg: "70px" }}
           >
             <Text
               fontSize={"14px"}
@@ -126,7 +125,7 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
                 </Text>
               </a>
             </Flex>
-            <Flex mt={"10px"}>
+            <Flex mt={"10px"} display={{ base: "none", lg: "flex" }}>
               {project?.myWork ? (
                 <Text color={"primary.blue"} fontWeight={"600"}>
                   {project?.myWork}
