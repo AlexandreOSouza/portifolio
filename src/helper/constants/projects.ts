@@ -122,12 +122,20 @@ export const PROJECTS = [
     title: "Project 4",
     subtitle: "_my_NFT_mp",
     description:
-      "My own NFT Marketplace build with React and Solidity based on Ethereum blockchain.",
+      "My own NFT Marketplace build with React and Solidity based on Polygon blockchain.",
     ctaLink: "https://github.com/AlexandreOSouza/nft-marketplace",
     image: "./assets/projects/my_mp.webp",
     react: true,
     solidity: true,
-    ethereum: true,
+    text: "My own NFT Marketplace build with React and Solidity based on Polygon blockchain. The smart contract was develop with hardhat and deployed at mumbai testnet.",
+    owner: "My self",
+    myWork: "I was responsible to develop this website and the smart contract.",
+    slideImage: [
+      {
+        src: "./assets/projects/my_mp.webp",
+        alt: "image 1",
+      },
+    ],
   },
   {
     id: 5,
@@ -140,18 +148,40 @@ export const PROJECTS = [
     react: true,
     solidity: true,
     ethereum: true,
+    text: "An App to upload videos to IPFS and store on the Ethereum blockchain. The smart contract was develop with truffle and deployed at Ethereum testnet.",
+    owner: "My self",
+    myWork: "I was responsible to develop this website and the smart contract.",
+    slideImage: [
+      {
+        src: "./assets/projects/dvideo.webp",
+        alt: "image 1",
+      },
+      {
+        src: "./assets/projects/dvideo/dvideo-2.webp",
+        alt: "image 1",
+      },
+    ],
   },
   {
     id: 6,
     title: "Project 6",
     subtitle: "_DMemory",
     description:
-      "A memory game in that you can collect NFT when you find the matching one.",
+      "A memory game that you can an collect NFT when you find the matching one.",
     ctaLink: "https://github.com/AlexandreOSouza/dmemory",
     image: "./assets/projects/dmemory.webp",
     react: true,
     solidity: true,
     ethereum: true,
+    text: "A memory game that you can an collect NFT when you find the matching one. The smart contract was develop with truffle and deployed at Ethereum testnet.",
+    owner: "My self",
+    myWork: "I was responsible to develop this website and the smart contract.",
+    slideImage: [
+      {
+        src: "./assets/projects/dmemory.webp",
+        alt: "image 1",
+      },
+    ],
   },
   {
     id: 7,
@@ -164,6 +194,23 @@ export const PROJECTS = [
     react: true,
     solidity: true,
     ethereum: true,
+    text: "A WEB3 Instagram clone where you can upload an image and the users can give you a tip. The smart contract was develop with truffle and deployed at Ethereum testnet.",
+    owner: "My self",
+    myWork: "I was responsible to develop this website and the smart contract.",
+    slideImage: [
+      {
+        src: "./assets/projects/decentagram.webp",
+        alt: "image 1",
+      },
+      {
+        src: "./assets/projects/decentagram/decentagram-2.webp",
+        alt: "image 2",
+      },
+      {
+        src: "./assets/projects/decentagram/decentagram-3.webp",
+        alt: "image 3",
+      },
+    ],
   },
   {
     id: 8,

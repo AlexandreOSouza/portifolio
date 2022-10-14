@@ -77,7 +77,7 @@ const ProjectModal = ({ isOpen, onClose, projectId }: Props) => {
         background={"primary.mid"}
         border={"1px solid"}
         borderColor={"lines.main"}
-        height={"70vh"}
+        height={"80vh"}
         maxH={"729px"}
       >
         <ModalHeader>
