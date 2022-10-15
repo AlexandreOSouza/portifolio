@@ -90,6 +90,7 @@ const ProjectCard = ({ onOpen, ...props }: Props) => {
           onClick={(e) => handleClick(e.target)}
           _hover={{
             mt: "10px",
+            boxShadow: "1px 3px 42px -15px rgba(0,0,0,0.75)",
           }}
         >
           <Flex
