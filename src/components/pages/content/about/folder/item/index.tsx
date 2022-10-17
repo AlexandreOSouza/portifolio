@@ -7,7 +7,7 @@ import { usePage } from "../../../../../../hooks/usePages";
 type Props = {
   title: any;
   icon: ReactElement;
-  contentIndex: number;
+  contentIndex?: number;
 };
 
 const Item = ({ title, icon, contentIndex }: Props) => {
@@ -24,7 +24,7 @@ const Item = ({ title, icon, contentIndex }: Props) => {
       _hover={{
         cursor: "pointer",
       }}
-      onClick={() => setCurrentAboutContent(contentIndex)}
+      onClick={() => contentIndex && setCurrentAboutContent(contentIndex)}
     >
       <>
         {icon}

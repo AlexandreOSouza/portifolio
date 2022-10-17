@@ -12,5 +12,5 @@ export const ABOUT_CONTENT = {
 } as any;
 
 export const ABOUT_TAB_TITLE = {
-  1: "Prof. Info",
+  1: "index",
 } as any;
