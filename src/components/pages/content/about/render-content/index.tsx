@@ -8,11 +8,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
+import { ABOUT_TAB_TITLE } from "../../../../../helper/constants/about";
+import { usePage } from "../../../../../hooks/usePages";
 import CustomTab from "./tab";
 import IndexPanel from "./tab-panel/index";
 import MobilePanel from "./tab-panel/index/mobile";
 
 const RenderAboutContent = () => {
+  const { currentAboutContent } = usePage();
   return (
     <>
       <Flex
@@ -27,8 +30,7 @@ const RenderAboutContent = () => {
       >
         <Tabs variant="unstyled" width={"100%"}>
           <TabList defaultValue={0}>
-            <CustomTab title={"index"} />
-            <CustomTab title={"about-me"} />
+            <CustomTab title={ABOUT_TAB_TITLE[currentAboutContent]} />
           </TabList>
 
           <TabPanels
