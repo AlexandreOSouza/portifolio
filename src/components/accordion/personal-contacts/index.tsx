@@ -22,7 +22,6 @@ const PersonalInfoAccordion = ({ isExpanded, ...props }: Props) => {
             <a href="mailto:alesouza.dev@gmail.com">alesouza.dev@gmail.com</a>
           }
           icon={<RiMailFill />}
-          isActive
         />
         <Item
           title={
@@ -35,7 +34,6 @@ const PersonalInfoAccordion = ({ isExpanded, ...props }: Props) => {
             </a>
           }
           icon={<RiPhoneFill />}
-          isActive
         />
       </AccordionPanel>
     </>
