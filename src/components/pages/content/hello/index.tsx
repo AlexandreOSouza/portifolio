@@ -21,7 +21,6 @@ const HelloContent = () => {
           minW={"55vw"}
         >
           <MainContent />
-          rent of 9accdc2 (add 3d object)
         </Flex>
         <Flex
           display={{ base: "none", lg: "flex" }}
