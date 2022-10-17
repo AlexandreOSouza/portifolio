@@ -13,6 +13,7 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
 } from "react-icons/ri";
+import { CONTENT_INDEX } from "../../../../../../helper/constants/about";
 import AccordionCustomButton from "../../../../../accordion/button";
 import Item from "../item";
 
@@ -25,8 +26,11 @@ const Hobbies = () => {
             <AccordionCustomButton title={"hobbies"} isExpanded={isExpanded} />
 
             <AccordionPanel background={"primary.mid"}>
-              <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />
-              <Item title={"university"} icon={<RiMarkdownFill />} />
+              <Item
+                title={"high-school"}
+                icon={<RiMarkdownFill />}
+                contentIndex={CONTENT_INDEX.HOBBIES_INFO}
+              />
             </AccordionPanel>
           </>
         )}

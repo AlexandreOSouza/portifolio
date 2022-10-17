@@ -5,19 +5,15 @@ type Props = {
 };
 
 const PageContext = createContext({
-  currentPage: 1,
-  setCurrentPage: (currentPage: number) => {},
   currentAboutSection: 1,
   setCurrentAboutSection: (currentAboutSection: number) => {},
+  currentAboutContent: 1,
+  setCurrentAboutContent: (currentAboutContent: number) => {},
 });
 
 export const PageContextProvider = ({ children }: Props) => {
-  const [currentPage, setCurrentPage] = useState(1);
   const [currentAboutSection, setCurrentAboutSection] = useState(1);
-
-  const setCurrentIndexPage = (currentPage: number) => {
-    setCurrentPage(currentPage);
-  };
+  const [currentAboutContent, setCurrentAboutContent] = useState(1);
   const setCurrentAboutIndexPage = (currentPage: number) => {
     setCurrentAboutSection(currentPage);
   };
@@ -25,10 +21,10 @@ export const PageContextProvider = ({ children }: Props) => {
   return (
     <PageContext.Provider
       value={{
-        currentPage,
-        setCurrentPage: setCurrentIndexPage,
         currentAboutSection,
         setCurrentAboutSection: setCurrentAboutIndexPage,
+        currentAboutContent,
+        setCurrentAboutContent,
       }}
     >
       {children}

@@ -28,7 +28,6 @@ const RenderAboutContent = () => {
         <Tabs variant="unstyled" width={"100%"}>
           <TabList defaultValue={0}>
             <CustomTab title={"index"} />
-            <CustomTab title={"about-me"} />
           </TabList>
 
           <TabPanels

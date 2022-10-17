@@ -2,15 +2,18 @@ import { Flex, Text } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { IconType } from "react-icons";
 import { RiArrowDropRightFill, RiMarkdownFill } from "react-icons/ri";
+import { usePage } from "../../../../../../hooks/usePages";
 
 type Props = {
   title: any;
   icon: ReactElement;
-  onClick?: () => void;
-  isActive?: boolean;
+  contentIndex: number;
 };
 
-const Item = ({ title, icon, onClick, isActive = false }: Props) => {
+const Item = ({ title, icon, contentIndex }: Props) => {
+  const { currentAboutContent, setCurrentAboutContent } = usePage();
+
+  const isActive = currentAboutContent === contentIndex;
   return (
     <Flex
       alignItems={"center"}
@@ -21,7 +24,7 @@ const Item = ({ title, icon, onClick, isActive = false }: Props) => {
       _hover={{
         cursor: "pointer",
       }}
-      onClick={onClick}
+      onClick={() => setCurrentAboutContent(contentIndex)}
     >
       <>
         {icon}

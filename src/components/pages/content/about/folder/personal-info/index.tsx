@@ -13,6 +13,7 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
 } from "react-icons/ri";
+import { CONTENT_INDEX } from "../../../../../../helper/constants/about";
 import AccordionCustomButton from "../../../../../accordion/button";
 import PersonalInfoAccordion from "../../../../../accordion/personal-contacts";
 import Item from "../item";
@@ -29,8 +30,11 @@ const PersonalInfo = () => {
             />
 
             <AccordionPanel background={"primary.mid"}>
-              <Item title={"high-school"} icon={<RiMarkdownFill />} isActive />
-              <Item title={"university"} icon={<RiMarkdownFill />} />
+              <Item
+                title={"index"}
+                icon={<RiMarkdownFill />}
+                contentIndex={CONTENT_INDEX.PERSONAL_INFO}
+              />
             </AccordionPanel>
           </>
         )}
