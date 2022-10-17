@@ -16,3 +16,9 @@ export const ABOUT_CONTENT = {
   3: ContactsInfo,
   4: HobbiesInfo,
 } as any;
+
+export const ABOUT_TAB_TITLE = {
+  1: "Prof. Info",
+  2: "Pers. Info",
+  4: "Hobbies",
+} as any;
