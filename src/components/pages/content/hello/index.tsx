@@ -37,6 +37,7 @@ const HelloContent = () => {
             background={"rgba(1, 20, 35, 0.19)"}
             width={"181px"}
             height={"142px"}
+            display={{ base: "none", lg: "flex" }}
             flexDirection={"column"}
             px={"13px"}
             pt={"15px"}
