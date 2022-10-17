@@ -12,8 +12,6 @@
     "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@splinetool/react-spline": "^2.2.3",
-    "@splinetool/runtime": "^0.9.124",
     "@types/lodash": "^4.14.186",
     "axios": "^1.1.2",
     "firacode": "^6.2.0",
