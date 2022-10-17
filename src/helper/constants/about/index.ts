@@ -1,6 +1,3 @@
-import ContactsInfo from "./contacts";
-import HobbiesInfo from "./hobbies";
-import PersonalInfo from "./personal-info";
 import ProfessionalInfo from "./professional-info";
 
 export enum CONTENT_INDEX {
@@ -12,13 +9,8 @@ export enum CONTENT_INDEX {
 
 export const ABOUT_CONTENT = {
   1: ProfessionalInfo,
-  2: PersonalInfo,
-  3: ContactsInfo,
-  4: HobbiesInfo,
 } as any;
 
 export const ABOUT_TAB_TITLE = {
   1: "Prof. Info",
-  2: "Pers. Info",
-  4: "Hobbies",
 } as any;

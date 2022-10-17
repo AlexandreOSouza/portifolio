@@ -44,16 +44,6 @@ const SideBar = () => {
         isActive={currentAboutSection === ABOUT_INDEX.PROFESSIONAL}
         onClick={() => handleClick(ABOUT_INDEX.PROFESSIONAL)}
       />
-      <Icon
-        src={"./assets/about/info.svg"}
-        isActive={currentAboutSection === ABOUT_INDEX.PERSONAL}
-        onClick={() => handleClick(ABOUT_INDEX.PERSONAL)}
-      />
-      <Icon
-        src={"./assets/about/hobbie.svg"}
-        isActive={currentAboutSection === ABOUT_INDEX.HOBBIES}
-        onClick={() => handleClick(ABOUT_INDEX.HOBBIES)}
-      />
     </Flex>
   );
 };
