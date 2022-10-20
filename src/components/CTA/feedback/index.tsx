@@ -1,30 +1,60 @@
-import { ButtonProps } from "@chakra-ui/react";
+import {
+  ButtonProps,
+  Collapse,
+  Fade,
+  Flex,
+  Slide,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { RiChatSmile3Line } from "react-icons/ri";
 import BaseCTAButton from "../base-button";
 
 const Feedback = () => {
+  const { isOpen, onToggle } = useDisclosure();
+
   return (
-    <BaseCTAButton
-      width={"50px"}
-      height={"50px"}
-      position={"fixed"}
+    <Flex
+      position={"absolute"}
+      display={"flex"}
+      flexDirection={"row-reverse"}
       zIndex={2}
-      borderRadius={"100%"}
       mt={"calc(100vh - 120px)"}
-      ml={"calc(100vw - 90px)"}
-      background={"primary.blue"}
-      border={"1px solid"}
-      borderColor={"gray"}
-      _hover={{
-        backgroundColor: "primary.blue",
-        filter: "brightness(0.9)",
-      }}
-      _active={{
-        backgroundColor: "primary.blue",
-      }}
+      ml={"calc(100vw - 190px)"}
+      width={"150px"}
     >
-      <RiChatSmile3Line fontSize={"20px"} color={"lightGray"} />
-    </BaseCTAButton>
+      <BaseCTAButton
+        width={"50px"}
+        height={"50px"}
+        borderRadius={"40px"}
+        background={"primary.blue"}
+        border={"1px solid"}
+        borderColor={"gray"}
+        transition={"width 0.3s"}
+        overflow={"hidden"}
+        onMouseEnter={onToggle}
+        onMouseLeave={onToggle}
+        _hover={{
+          backgroundColor: "primary.blue",
+          width: "150px",
+        }}
+        _active={{
+          backgroundColor: "primary.blue",
+          filter: "brightness(0.9)",
+        }}
+      >
+        <>
+          <RiChatSmile3Line fontSize={"20px"} color={"lightGray"} />
+          <Text
+            color={"lightGray"}
+            fontSize={"20px"}
+            display={isOpen ? "flex" : "none"}
+          >
+            Feedback
+          </Text>
+        </>
+      </BaseCTAButton>
+    </Flex>
   );
 };
 
