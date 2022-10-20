@@ -13,7 +13,12 @@ const FeedbackHeader = ({ onClose }: Props) => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Text color={"lightGray"} fontSize={"18px"} ml={"auto"}>
+      <Text
+        color={"lightGray"}
+        fontSize={"18px"}
+        ml={"auto"}
+        fontWeight={"bold"}
+      >
         Send Your Feedback
       </Text>
       <Flex ml={"auto"} mr={"10px"}>

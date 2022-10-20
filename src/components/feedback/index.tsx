@@ -1,7 +1,8 @@
-import { Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import FeedbackButton from "../CTA/feedback";
 import FeedbackContainer from "./feedback-container";
+import FeedbackStep from "./feedback-step";
 
 const Feedback = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Feedback = () => {
   return (
     <>
       <FeedbackContainer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Text></Text>
+        <FeedbackStep />
       </FeedbackContainer>
       <FeedbackButton onClick={() => setIsOpen((prev) => !prev)} />
     </>
