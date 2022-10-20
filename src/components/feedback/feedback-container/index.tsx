@@ -1,5 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { RiCloseFill } from "react-icons/ri";
+import FeedbackFooter from "../feedback-footer";
 import FeedbackHeader from "../feedback-header";
 
 type Props = {
@@ -30,6 +31,7 @@ const FeedbackContainer = ({ isOpen, onClose, children }: Props) => {
     >
       <FeedbackHeader onClose={onClose} />
       {children}
+      <FeedbackFooter />
     </Flex>
   );
 };
