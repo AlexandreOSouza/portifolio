@@ -1,12 +1,13 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
+import { FEEDBACK_TITLE, STEP_TYPE } from "../../../../../helper/constants";
 
 type Props = {
-  title: string;
+  step: STEP_TYPE;
   icon: React.ReactElement;
 };
 
-const FeedbackCard = ({ title, icon }: Props) => {
+const FeedbackCard = ({ step, icon }: Props) => {
   return (
     <Flex
       flexDirection={"column"}
@@ -24,7 +25,7 @@ const FeedbackCard = ({ title, icon }: Props) => {
     >
       {icon}
       <Text color={"lightgray"} fontWeight={"bold"}>
-        {title}
+        {FEEDBACK_TITLE[step]}
       </Text>
     </Flex>
   );

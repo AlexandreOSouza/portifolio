@@ -1,5 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { RiCloseFill } from "react-icons/ri";
+import { FEEDBACK_TITLE } from "../../../helper/constants";
 
 type Props = {
   onClose: () => void;
@@ -19,7 +21,7 @@ const FeedbackHeader = ({ onClose }: Props) => {
         ml={"auto"}
         fontWeight={"bold"}
       >
-        Send Your Feedback
+        {FEEDBACK_TITLE[1]}
       </Text>
       <Flex ml={"auto"} mr={"10px"}>
         <RiCloseFill
