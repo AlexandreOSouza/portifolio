@@ -11,30 +11,16 @@ import { useState } from "react";
 import { RiChatSmile3Line } from "react-icons/ri";
 import BaseCTAButton from "../base-button";
 
-const Feedback = () => {
+type Props = {
+  onClick: () => void;
+};
+
+const FeedbackButton = ({ onClick }: Props) => {
   const { isOpen, onToggle } = useDisclosure();
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
-      <Flex
-        // display={isOpenModal ? "flex" : "none"}
-        opacity={isOpenModal ? "1" : "0"}
-        position={"absolute"}
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
-        width={"400px"}
-        height={"300px"}
-        border={"1px solid"}
-        borderColor={"lines.main"}
-        background={"primary.dark"}
-        mt={"calc(100vh - 440px)"}
-        ml={"calc(100vw - 440px)"}
-        borderRadius={"20px"}
-        borderBottomRightRadius={"none"}
-        transition={"opacity .1s linear"}
-      ></Flex>
       <Flex
         position={"absolute"}
         display={"flex"}
@@ -63,9 +49,7 @@ const Feedback = () => {
             backgroundColor: "primary.blue",
             filter: "brightness(0.9)",
           }}
-          onClick={() => {
-            setIsOpenModal((prev) => !prev);
-          }}
+          onClick={onClick}
         >
           <>
             <RiChatSmile3Line fontSize={"20px"} color={"lightGray"} />
@@ -83,4 +67,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default FeedbackButton;
