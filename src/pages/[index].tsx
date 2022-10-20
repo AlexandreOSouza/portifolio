@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 import DefaultButton from "../components/CTA/default";
+import Feedback from "../components/CTA/feedback";
 import GhostButton from "../components/CTA/ghost";
 import PrimaryButton from "../components/CTA/primary";
 import Footer from "../components/footer";
@@ -20,6 +21,7 @@ const Home: NextPage = (props: any) => {
     >
       <Header />
       <MainContent page={props.page} />
+      <Feedback />
       <Footer />
     </Flex>
   );
