@@ -12,6 +12,7 @@ const PageContext = createContext({
   setCurrentAboutContent: (currentAboutContent: number) => {},
   feedbackTitle: "",
   changeStep: (step: STEP_TYPE) => {},
+  step: 0,
 });
 
 export const PageContextProvider = ({ children }: Props) => {
@@ -38,6 +39,7 @@ export const PageContextProvider = ({ children }: Props) => {
         setCurrentAboutContent,
         feedbackTitle,
         changeStep,
+        step,
       }}
     >
       {children}
