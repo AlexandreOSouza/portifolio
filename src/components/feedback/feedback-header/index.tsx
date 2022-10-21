@@ -2,12 +2,15 @@ import { Flex, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { RiCloseFill } from "react-icons/ri";
 import { FEEDBACK_TITLE } from "../../../helper/constants";
+import { usePage } from "../../../hooks/usePages";
 
 type Props = {
   onClose: () => void;
 };
 
 const FeedbackHeader = ({ onClose }: Props) => {
+  const { feedbackTitle } = usePage();
+
   return (
     <Flex
       width={"100%"}
@@ -21,7 +24,7 @@ const FeedbackHeader = ({ onClose }: Props) => {
         ml={"auto"}
         fontWeight={"bold"}
       >
-        {FEEDBACK_TITLE[1]}
+        <>{feedbackTitle}</>
       </Text>
       <Flex ml={"auto"} mr={"10px"}>
         <RiCloseFill

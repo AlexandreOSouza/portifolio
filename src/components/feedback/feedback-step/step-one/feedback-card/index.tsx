@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { FEEDBACK_TITLE, STEP_TYPE } from "../../../../../helper/constants";
+import { usePage } from "../../../../../hooks/usePages";
 
 type Props = {
   step: STEP_TYPE;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const FeedbackCard = ({ step, icon }: Props) => {
+  const { changeStep } = usePage();
   return (
     <Flex
       flexDirection={"column"}
@@ -22,6 +24,7 @@ const FeedbackCard = ({ step, icon }: Props) => {
       _hover={{
         border: "2px solid lightGray",
       }}
+      onClick={() => changeStep(step)}
     >
       {icon}
       <Text color={"lightgray"} fontWeight={"bold"}>
