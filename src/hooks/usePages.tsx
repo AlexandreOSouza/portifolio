@@ -12,7 +12,7 @@ const PageContext = createContext({
   setCurrentAboutContent: (currentAboutContent: number) => {},
   feedbackTitle: "",
   changeStep: (step: STEP_TYPE) => {},
-  step: 0,
+  step: 1,
 });
 
 export const PageContextProvider = ({ children }: Props) => {
@@ -22,7 +22,7 @@ export const PageContextProvider = ({ children }: Props) => {
     setCurrentAboutSection(currentPage);
   };
 
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [feedbackTitle, setFeedbackTitle] = useState(FEEDBACK_TITLE[1]);
 
   const changeStep = useCallback((step: STEP_TYPE) => {

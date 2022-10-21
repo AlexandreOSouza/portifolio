@@ -4,7 +4,11 @@ import { usePage } from "../../../hooks/usePages";
 import BugStep from "./bug-step";
 import StepOne from "./step-one";
 
-const FeedbackStep = () => {
+type Props = {
+  isOpen: boolean;
+};
+
+const FeedbackStep = ({ isOpen }: Props) => {
   const { step } = usePage();
   const RenderStep = useMemo(() => {
     if (step === FEEDBACK_STEPS.INITIAL_STEP) {
@@ -13,7 +17,7 @@ const FeedbackStep = () => {
       return <BugStep />;
     }
   }, [step]);
-  return <>{RenderStep}</>;
+  return isOpen ? <>{RenderStep}</> : <></>;
 };
 
 export default FeedbackStep;

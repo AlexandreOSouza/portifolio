@@ -7,8 +7,8 @@ const Feedback = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <FeedbackContainer isOpen={true} onClose={() => setIsOpen(false)}>
-        <FeedbackStep />
+      <FeedbackContainer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <FeedbackStep isOpen={isOpen} />
       </FeedbackContainer>
       <FeedbackButton onClick={() => setIsOpen((prev) => !prev)} />
     </>
