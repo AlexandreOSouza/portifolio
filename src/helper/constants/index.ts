@@ -24,3 +24,19 @@ export const PAGE_TITLE = {
   PROJECTS: "alesouza.dev | Projects",
   CONTACT: "alesouza.dev | Contact-me",
 };
+
+export type STEP_TYPE = 1 | 2 | 3 | 4;
+
+export const FEEDBACK_STEPS = {
+  INITIAL_STEP: 1 as STEP_TYPE,
+  BUG_STEP: 2 as STEP_TYPE,
+  IDEA_STEP: 3 as STEP_TYPE,
+  OTHER_STEP: 4 as STEP_TYPE,
+};
+
+export const FEEDBACK_TITLE = {
+  1: "Send Your Feedback",
+  2: "Bug",
+  3: "Idea",
+  4: "Buy a Kofi",
+};
