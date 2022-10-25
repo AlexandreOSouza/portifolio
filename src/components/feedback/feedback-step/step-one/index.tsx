@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import { RiBugFill } from "react-icons/ri";
+import { RiBugFill, RiCupFill } from "react-icons/ri";
 import { BiConversation } from "react-icons/bi";
 import { FcIdea } from "react-icons/fc";
 import FeedbackCard from "./feedback-card";
@@ -25,7 +25,7 @@ const StepOne = () => {
       />
       <FeedbackCard
         step={FEEDBACK_STEPS.OTHER_STEP}
-        icon={<BiConversation size={"50px"} color={"orange"} />}
+        icon={<RiCupFill size={"50px"} color={"orange"} />}
       />
     </Flex>
   );

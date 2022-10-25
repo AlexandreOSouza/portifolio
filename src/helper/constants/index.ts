@@ -38,5 +38,5 @@ export const FEEDBACK_TITLE = {
   1: "Send Your Feedback",
   2: "Bug",
   3: "Idea",
-  4: "Other",
+  4: "Buy a Kofi",
 };

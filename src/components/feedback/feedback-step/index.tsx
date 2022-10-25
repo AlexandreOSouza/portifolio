@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { FEEDBACK_STEPS } from "../../../helper/constants";
 import { usePage } from "../../../hooks/usePages";
 import BugStep from "./bug-step";
+import BuyAKofiStep from "./buy-step";
 import IdeaStep from "./idea-step";
 import StepOne from "./step-one";
 
@@ -18,6 +19,8 @@ const FeedbackStep = ({ isOpen }: Props) => {
       return <BugStep />;
     } else if (step === FEEDBACK_STEPS.IDEA_STEP) {
       return <IdeaStep />;
+    } else {
+      return <BuyAKofiStep />;
     }
   }, [step]);
   return isOpen ? <>{RenderStep}</> : <></>;

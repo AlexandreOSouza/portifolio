@@ -2,7 +2,12 @@ import { Flex, Text } from "@chakra-ui/react";
 import { useEffect, useMemo } from "react";
 import { BiConversation } from "react-icons/bi";
 import { FcIdea } from "react-icons/fc";
-import { RiArrowLeftLine, RiBugFill, RiCloseFill } from "react-icons/ri";
+import {
+  RiArrowLeftLine,
+  RiBugFill,
+  RiCloseFill,
+  RiCupFill,
+} from "react-icons/ri";
 import { FEEDBACK_STEPS, FEEDBACK_TITLE } from "../../../helper/constants";
 import { usePage } from "../../../hooks/usePages";
 
@@ -19,7 +24,7 @@ const FeedbackHeader = ({ onClose }: Props) => {
     } else if (step === FEEDBACK_STEPS.IDEA_STEP) {
       return <FcIdea size={"25px"} />;
     } else if (step === FEEDBACK_STEPS.OTHER_STEP) {
-      return <BiConversation size={"25px"} color={"orange"} />;
+      return <RiCupFill size={"25px"} color={"orange"} />;
     }
   }, [step]);
 
