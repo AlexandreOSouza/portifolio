@@ -15,7 +15,7 @@ const FeedbackHeader = ({ onClose }: Props) => {
 
   const RenderIcon = useMemo(() => {
     if (step === FEEDBACK_STEPS.BUG_STEP) {
-      return <RiBugFill color={"#303fb8"} size={"25px"} />;
+      return <RiBugFill color={"#3C9D93"} size={"25px"} />;
     } else if (step === FEEDBACK_STEPS.IDEA_STEP) {
       return <FcIdea size={"25px"} />;
     } else if (step === FEEDBACK_STEPS.OTHER_STEP) {

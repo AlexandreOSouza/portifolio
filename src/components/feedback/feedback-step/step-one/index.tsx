@@ -17,7 +17,7 @@ const StepOne = () => {
     >
       <FeedbackCard
         step={FEEDBACK_STEPS.BUG_STEP}
-        icon={<RiBugFill size={"50px"} color={"green"} />}
+        icon={<RiBugFill size={"50px"} color={"#3C9D93"} />}
       />
       <FeedbackCard
         step={FEEDBACK_STEPS.IDEA_STEP}
