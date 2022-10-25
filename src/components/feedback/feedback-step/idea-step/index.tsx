@@ -26,7 +26,7 @@ const IdeaStep = () => {
           background={"primary.blueDark"}
           p={0}
           _hover={{
-            background: "secondary.green",
+            background: "#beba3a",
           }}
         >
           <RiScreenshot2Fill color={"lightGray"} size={"25px"} />
@@ -35,7 +35,7 @@ const IdeaStep = () => {
           width={"100%"}
           background={"primary.blueDark"}
           _hover={{
-            background: "secondary.green",
+            background: "#beba3a",
           }}
         >
           <Text color={"lightGray"}>Send your Idea</Text>
