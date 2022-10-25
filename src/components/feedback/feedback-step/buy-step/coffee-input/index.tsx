@@ -1,18 +1,12 @@
 import { Button, ButtonProps, Flex, Input } from "@chakra-ui/react";
-import { useState } from "react";
 
-const CofiInput = () => {
-  const [amount, setAmount] = useState(1);
+type Props = {
+  amount: number;
+  increass: () => void;
+  decreass: () => void;
+};
 
-  const handleIncreass = () => {
-    setAmount((prev) => prev + 1);
-  };
-
-  const handleDecreass = () => {
-    if (amount === 1) return;
-    setAmount((prev) => prev - 1);
-  };
-
+const CofiInput = ({ amount, increass, decreass }: Props) => {
   const CustomButton = ({ children, ...props }: ButtonProps) => {
     return (
       <Button
@@ -33,7 +27,7 @@ const CofiInput = () => {
 
   return (
     <Flex>
-      <CustomButton onClick={handleDecreass}>-</CustomButton>
+      <CustomButton onClick={decreass}>-</CustomButton>
       <Input
         borderRadius={"20px"}
         width={"70px"}
@@ -43,7 +37,7 @@ const CofiInput = () => {
         color={"white"}
         textAlign={"center"}
       />
-      <CustomButton onClick={handleIncreass}>+</CustomButton>
+      <CustomButton onClick={increass}>+</CustomButton>
     </Flex>
   );
 };
