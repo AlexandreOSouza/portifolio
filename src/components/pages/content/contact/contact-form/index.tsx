@@ -1,6 +1,6 @@
 import { Flex, Input, Text, Textarea } from "@chakra-ui/react";
-import axios from "axios";
 import { useState } from "react";
+import { sendContact } from "../../../../../helper/email";
 import { useForm } from "../../../../../hooks/useForm";
 import DefaultButton from "../../../../CTA/default";
 
@@ -12,6 +12,7 @@ const ContactForm = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+    sendContact(name, email, message);
     setEmailsend(true);
     cleanForm();
   };
