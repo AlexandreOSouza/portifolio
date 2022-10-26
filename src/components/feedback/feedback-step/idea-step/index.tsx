@@ -1,7 +1,16 @@
 import { Button, Flex, Text, Textarea } from "@chakra-ui/react";
+import { useState } from "react";
 import { RiScreenshot2Fill } from "react-icons/ri";
+import { FEEDBACK_TITLE } from "../../../../helper/constants";
+import { sendFeedback } from "../../../../helper/email";
 
 const IdeaStep = () => {
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = () => {
+    sendFeedback(message, FEEDBACK_TITLE[3]);
+  };
+
   return (
     <Flex
       flex={1}
@@ -20,6 +29,8 @@ const IdeaStep = () => {
         _placeholder={{
           color: "lightGray",
         }}
+        onChange={(e) => setMessage(e.target.value)}
+        value={message}
       />
       <Flex height={"70px"} alignItems={"center"} columnGap={"10px"}>
         <Button
@@ -37,6 +48,7 @@ const IdeaStep = () => {
           _hover={{
             background: "#beba3a",
           }}
+          onClick={handleSubmit}
         >
           <Text color={"lightGray"}>Send your Idea</Text>
         </Button>
