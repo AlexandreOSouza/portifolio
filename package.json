@@ -24,7 +24,15 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
-    "react-slideshow-image": "^4.0.5"
+    "react-slideshow-image": "^4.0.5",
+    "web3modal": "^1.9.5",
+    "hardhat": "^2.8.4",
+    "ethers": "^5.5.4",
+    "ethereum-waffle": "^3.4.0",
+    "chai": "^4.3.6",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "18.7.22",

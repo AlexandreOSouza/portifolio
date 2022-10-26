@@ -2,16 +2,27 @@ import { Button, Flex, Input, Text, Textarea } from "@chakra-ui/react";
 import { useState } from "react";
 import { RiCupFill } from "react-icons/ri";
 import CofiInput from "./coffee-input";
+import Web3Modal from "web3modal";
+import { ethers } from "ethers";
 
 const BuyAKofiStep = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [amount, setAmount] = useState(1);
+  const [usrAddr, setUsrAddr] = useState<string>();
+  const [signer, setSigner] = useState<any>();
   const price = 0.005;
 
-  const usrAddr = "0x89795cC75Bab93b562A673b8FbD9c32E2eaD2BdD";
-
-  const handleClick = () => {
-    setIsClicked((prev) => !prev);
+  const handleClick = async () => {
+    if (!usrAddr) {
+      const web3Modal = new Web3Modal();
+      const connection = await web3Modal.connect();
+      const provider = new ethers.providers.Web3Provider(connection);
+      const signert = provider.getSigner();
+      setSigner(signert);
+      const address = await signer.getAddress();
+      setUsrAddr(shortAddress(address));
+    }
+    setIsClicked(true);
   };
 
   const handleIncreass = () => {
@@ -24,17 +35,20 @@ const BuyAKofiStep = () => {
   };
 
   const handleSupport = () => {
-    alert("sending...");
+    if (signer) {
+      signer.sendTransaction({
+        to: "0x89795cC75Bab93b562A673b8FbD9c32E2eaD2BdD",
+        value: ethers.utils.parseEther(`${price * amount}`),
+      });
+    }
   };
 
-  const shortUserAddr = () => {
-    const first = usrAddr.slice(0, 4);
-    const last = usrAddr.slice(-4, usrAddr.length);
-    const shorter = `${first}...${last}`;
-    return shorter;
-  };
+  const shortAddress = (address: string) => {
+    const f = address.slice(0, 4);
+    const e = address.slice(-4, address.length);
 
-  const address = shortUserAddr();
+    return `${f}...${e}`;
+  };
 
   return (
     <Flex
@@ -48,7 +62,7 @@ const BuyAKofiStep = () => {
       {isClicked ? (
         <Flex flex={1} flexDirection={"column"}>
           <Text color={"white"} fontWeight={"bold"}>
-            Your wallet address: {address}
+            Your wallet address: {usrAddr}
           </Text>
           <Flex
             alignItems={"center"}
