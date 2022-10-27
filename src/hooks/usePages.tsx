@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useCallback, useContext, useState } from "react";
+import { STEP_TYPE, FEEDBACK_TITLE } from "../helper/constants";
 
 type Props = {
   children: React.ReactNode;
@@ -9,6 +10,9 @@ const PageContext = createContext({
   setCurrentAboutSection: (currentAboutSection: number) => {},
   currentAboutContent: 1,
   setCurrentAboutContent: (currentAboutContent: number) => {},
+  feedbackTitle: "",
+  changeStep: (step: STEP_TYPE) => {},
+  step: 1,
 });
 
 export const PageContextProvider = ({ children }: Props) => {
@@ -18,6 +22,14 @@ export const PageContextProvider = ({ children }: Props) => {
     setCurrentAboutSection(currentPage);
   };
 
+  const [step, setStep] = useState(1);
+  const [feedbackTitle, setFeedbackTitle] = useState(FEEDBACK_TITLE[1]);
+
+  const changeStep = useCallback((step: STEP_TYPE) => {
+    setStep(step);
+    setFeedbackTitle(FEEDBACK_TITLE[step]);
+  }, []);
+
   return (
     <PageContext.Provider
       value={{
@@ -25,6 +37,9 @@ export const PageContextProvider = ({ children }: Props) => {
         setCurrentAboutSection: setCurrentAboutIndexPage,
         currentAboutContent,
         setCurrentAboutContent,
+        feedbackTitle,
+        changeStep,
+        step,
       }}
     >
       {children}

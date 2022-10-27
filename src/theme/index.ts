@@ -7,6 +7,7 @@ const theme = extendTheme({
       mid: "#011627",
       midDark: "#011221",
       blue: "#5565E8",
+      blueDark: "#303fb8",
     },
     secondary: {
       gray: "#607B96",
