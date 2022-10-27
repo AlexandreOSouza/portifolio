@@ -1,5 +1,5 @@
 import { Button, Flex, Input, Text, Textarea } from "@chakra-ui/react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { RiCupFill } from "react-icons/ri";
 import CofiInput from "./coffee-input";
 import Web3Modal from "web3modal";
@@ -10,6 +10,9 @@ const BuyAKofiStep = () => {
   const [amount, setAmount] = useState(1);
   const [usrAddr, setUsrAddr] = useState<string>();
   const [signer, setSigner] = useState<any>();
+  const [transaction, setTransaction] = useState();
+  const [currentStep, setCurrentStep] = useState(1);
+
   const price = 0.005;
 
   const handleClick = async () => {
@@ -23,6 +26,7 @@ const BuyAKofiStep = () => {
       setUsrAddr(shortAddress(address));
     }
     setIsClicked(true);
+    setCurrentStep(2);
   };
 
   const handleIncreass = () => {
@@ -41,8 +45,8 @@ const BuyAKofiStep = () => {
           to: "0x89795cC75Bab93b562A673b8FbD9c32E2eaD2BdD",
           value: ethers.utils.parseEther(`${price * amount}`),
         });
-
-        console.log(tx);
+        setTransaction(tx.hash);
+        setCurrentStep(3);
       } catch (e: any) {
         alert("Something wrong happens ☹️!");
       }
@@ -56,6 +60,79 @@ const BuyAKofiStep = () => {
     return `${f}...${e}`;
   };
 
+  const RenderConnect = () => {
+    return (
+      <Button
+        background={"accent.orange"}
+        _hover={{ background: "accent.orange", filter: "brightness(0.9)" }}
+        onClick={handleClick}
+      >
+        Connect your wallet
+      </Button>
+    );
+  };
+
+  const RenderForm = () => {
+    return (
+      <Flex flex={1} flexDirection={"column"}>
+        <Text color={"white"} fontWeight={"bold"}>
+          Your wallet address: {usrAddr}
+        </Text>
+        <Flex
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          mt={"25px"}
+        >
+          <Flex alignItems={"center"}>
+            <RiCupFill color={"#FEA55F"} size={"40px"} />
+            <Text color={"lightGray"} fontWeight={"bold"} ml={"10px"}>
+              {price} eth
+            </Text>
+          </Flex>
+          <CofiInput
+            amount={amount}
+            increass={handleIncreass}
+            decreass={handleDecreass}
+          />
+        </Flex>
+        <Input
+          mt={"10px"}
+          disabled
+          value={`${price * amount} eth`}
+          color={"white"}
+          borderRadius={"20px"}
+        />
+        <Button
+          borderRadius={"20px"}
+          background={"accent.orange"}
+          color={"white"}
+          mt={"10px"}
+          _hover={{
+            background: "accent.orange",
+            filter: "brightness(0.9)",
+          }}
+          onClick={handleSupport}
+        >
+          Support {price * amount} eth
+        </Button>
+      </Flex>
+    );
+  };
+
+  const RenderThanks = () => {
+    return <h1>Thanks</h1>;
+  };
+
+  const RenderContent = useMemo(() => {
+    if (currentStep === 1) {
+      return RenderConnect();
+    } else if (currentStep === 2) {
+      return RenderForm();
+    } else if (currentStep === 3) {
+      return RenderThanks();
+    }
+  }, [currentStep]);
+
   return (
     <Flex
       width={"100%"}
@@ -65,58 +142,7 @@ const BuyAKofiStep = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
-      {isClicked ? (
-        <Flex flex={1} flexDirection={"column"}>
-          <Text color={"white"} fontWeight={"bold"}>
-            Your wallet address: {usrAddr}
-          </Text>
-          <Flex
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            mt={"25px"}
-          >
-            <Flex alignItems={"center"}>
-              <RiCupFill color={"#FEA55F"} size={"40px"} />
-              <Text color={"lightGray"} fontWeight={"bold"} ml={"10px"}>
-                {price} eth
-              </Text>
-            </Flex>
-            <CofiInput
-              amount={amount}
-              increass={handleIncreass}
-              decreass={handleDecreass}
-            />
-          </Flex>
-          <Input
-            mt={"10px"}
-            disabled
-            value={`${price * amount} eth`}
-            color={"white"}
-            borderRadius={"20px"}
-          />
-          <Button
-            borderRadius={"20px"}
-            background={"accent.orange"}
-            color={"white"}
-            mt={"10px"}
-            _hover={{
-              background: "accent.orange",
-              filter: "brightness(0.9)",
-            }}
-            onClick={handleSupport}
-          >
-            Support {price * amount} eth
-          </Button>
-        </Flex>
-      ) : (
-        <Button
-          background={"accent.orange"}
-          _hover={{ background: "accent.orange", filter: "brightness(0.9)" }}
-          onClick={handleClick}
-        >
-          Connect your wallet
-        </Button>
-      )}
+      {RenderContent}
     </Flex>
   );
 };
