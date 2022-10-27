@@ -1,6 +1,6 @@
 import { Button, Flex, Input, Text, Textarea } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
-import { RiCupFill } from "react-icons/ri";
+import { RiCupFill, RiThumbUpLine } from "react-icons/ri";
 import CofiInput from "./coffee-input";
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
@@ -120,7 +120,21 @@ const BuyAKofiStep = () => {
   };
 
   const RenderThanks = () => {
-    return <h1>Thanks</h1>;
+    return (
+      <Flex
+        flex={1}
+        flexDirection={"column"}
+        height={"100%"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        rowGap={"10px"}
+      >
+        <RiThumbUpLine color={"orange"} size={"32px"} />
+        <Text color={"lightgray"} fontSize={"24px"}>
+          Thanks for Support
+        </Text>
+      </Flex>
+    );
   };
 
   const RenderContent = useMemo(() => {
