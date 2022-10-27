@@ -19,7 +19,7 @@ const BuyAKofiStep = () => {
       const provider = new ethers.providers.Web3Provider(connection);
       const signert = provider.getSigner();
       setSigner(signert);
-      const address = await signer.getAddress();
+      const address = await signert.getAddress();
       setUsrAddr(shortAddress(address));
     }
     setIsClicked(true);
@@ -34,12 +34,18 @@ const BuyAKofiStep = () => {
     setAmount((prev) => prev - 1);
   };
 
-  const handleSupport = () => {
+  const handleSupport = async () => {
     if (signer) {
-      signer.sendTransaction({
-        to: "0x89795cC75Bab93b562A673b8FbD9c32E2eaD2BdD",
-        value: ethers.utils.parseEther(`${price * amount}`),
-      });
+      try {
+        const tx = await signer.sendTransaction({
+          to: "0x89795cC75Bab93b562A673b8FbD9c32E2eaD2BdD",
+          value: ethers.utils.parseEther(`${price * amount}`),
+        });
+
+        console.log(tx);
+      } catch (e: any) {
+        alert("Something wrong happens ☹️!");
+      }
     }
   };
 
