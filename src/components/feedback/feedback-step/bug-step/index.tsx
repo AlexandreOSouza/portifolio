@@ -27,13 +27,6 @@ const BugStep = () => {
       />
       <Flex height={"70px"} alignItems={"center"} columnGap={"10px"}>
         <Button
-          background={"primary.blueDark"}
-          p={0}
-          _hover={{ background: "secondary.green" }}
-        >
-          <RiScreenshot2Fill color={"lightGray"} size={"25px"} />
-        </Button>
-        <Button
           width={"100%"}
           background={"primary.blueDark"}
           _hover={{ background: "secondary.green" }}
