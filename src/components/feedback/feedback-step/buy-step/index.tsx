@@ -137,7 +137,7 @@ const BuyAKofiStep = () => {
     );
   };
 
-  const RenderContent = useMemo(() => {
+  const RenderContent = () => {
     if (currentStep === 1) {
       return RenderConnect();
     } else if (currentStep === 2) {
@@ -145,7 +145,8 @@ const BuyAKofiStep = () => {
     } else if (currentStep === 3) {
       return RenderThanks();
     }
-  }, [currentStep]);
+    return <h1>error</h1>;
+  };
 
   return (
     <Flex
@@ -156,7 +157,7 @@ const BuyAKofiStep = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
-      {RenderContent}
+      <RenderContent />
     </Flex>
   );
 };
